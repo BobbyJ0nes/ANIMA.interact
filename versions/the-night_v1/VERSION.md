@@ -1,7 +1,7 @@
-# the-night — v1 (frozen 2026-08-19)
+# the-night — v1 (frozen at the v2 fork)
 
 frozen state of ANIMA.interact at the close of the margin-voice build.
-this snapshot is the version bobby walked on 19.08.26 via `?fresh`.
+this snapshot is the version bobby walked via `?fresh`.
 
 ## what this version is
 
@@ -34,7 +34,7 @@ vite dev server from project root, open `/term.html` (night) or
 
 ## why frozen
 
-bobby's 19.08 note: keep the environments and vibe; push toward a
+bobby's note: keep the environments and vibe; push toward a
 navigable story-mode — bigger navigable prose, characters with form/depth/
 autonomy, illusion of choice + inevitability of encounters, progressive
 liminal states, legible flow between scenes. v2 forks from here.

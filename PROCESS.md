@@ -1,7 +1,7 @@
-# PROCESS — anima.interact
+# PROCESS — ANIMA.interact
 
 > the iterative process record for the ANIMA interactive piece,
-> assembled 19.08.26 for IU000325 (Creative Making: Art & AI).
+> assembled for IU000325 (Creative Making: Art & AI).
 > everything referenced here exists in this repository; nothing is
 > reconstructed from memory. exportable as-is to PDF.
 
@@ -32,46 +32,46 @@ trained, character-LLM figures argued as horizon, she_dream excluded,
 the named EEG channels demoted so the unnamed latent could carry the
 question.
 
-## timeline
+## the arc
 
-- **17.08 — circuit v0.** vite + three.js skeleton of the dream's
+- **circuit v0.** vite + three.js skeleton of the dream's
   scenes, prose verbatim (typos preserved as artifacts). walked same
   day. `shots/v0_*`
-- **17.08 — field_01.** the material found: ~28k coloured glyphs, the
+- **field_01.** the material found: ~28k coloured glyphs, the
   ambient field made of the writing's own letters, forms condensing
   out of it. `shots/field01_*`
-- **18.08 — form-shop.** blender driven over its MCP socket by the
+- **the form-shop.** blender driven over its MCP socket by the
   agent; metaball figures → GLB → surface-sampled condensation
   targets. regenerative scene scripts in `shop/`.
-- **18.08 — the verdict.** the polygon walk judged "generic af" — the
+- **the verdict.** the polygon walk judged "generic af" — the
   pipeline worked, the material idea didn't live there. pivot.
-- **18.08 — termfield_01.** "forget 3d in the standard context": the
+- **termfield_01.** "forget 3d in the standard context": the
   page renders the night. heightfield column-march typeset into a
   character lattice; a z-buffer of characters. `shots/term01_*`
-- **18.08 — the style system.** six registers (night · folio ·
+- **the style system.** six registers (night · folio ·
   phosphor · rose · page · veil), live-switchable; then tightening,
   the star catalog + typographic moon, wind, water-text.
-- **18.08–19.08 — the split.** engine / env / scenes architecture;
+- **the split.** engine / env / scenes architecture;
   six scenes built by six parallel agent instances against a frozen
   contract (`src/term/scenes/CONTRACT.md`), each verifying itself
   headless. the EEG pipeline: raw 256Hz → per-second band powers →
   normalized channels + 1/f slope (`public/eeg/session01.json`).
-- **19.08 — divergence.** seven exploration forks (water, sky,
+- **divergence.** seven exploration forks (water, sky,
   ground, beings, concepts, submission, eeg-subconscious) branched
   and returned: `explorations/*.md`, five walkable studies, and the
   synthesis in `explorations/CONVERGENCE.md`.
-- **19.08 — verdicts + adoption.** four authored verdicts locked
+- **verdicts + adoption.** four authored verdicts locked
   (visitation; the mute visitor; both crossings shown; `unshaped`
   joins canon), then the full adopt wave: speech-as-condensation,
   whispering moss, wakes, shore gradients, the depletion arc, moon
   phases, cliff strata.
-- **19.08 — the night (v1).** the museum-not-dream verdict answered:
+- **the night (v1).** the museum-not-dream verdict answered:
   a director sequences the writing's order (gate → cloakroom → willow
   → streetlamp → theatre → boat → the fold), transitions dissolve the
   world into its own letters, and the margin voice types the writing
   at the moment each sentence becomes true. full narrated headless
   playthrough green. frozen as `versions/the-night_v1/`.
-- **19.08 — v2, the excavated night.** the author's story-mode note
+- **v2, the excavated night.** the author's story-mode note
   (navigable prose, characters with form/depth/autonomy, illusion of
   choice / inevitability of encounters, progressive liminality, less
   abstraction) ran as a structured wave: five parallel fable forks →
@@ -100,8 +100,8 @@ the author:
   prior artifact (the two crossings stand in the world, disagreeing).
 - **signs type, beings condense.** mechanical speech for notices;
   condensation for voices — nothing appears from nowhere.
-- **the visitor is a guest, and mute.** locked by verdict 19.08.
-- **conduct is not intention** (19.08, adopted from the cross-model
+- **the visitor is a guest, and mute.** locked by verdict.
+- **conduct is not intention** (adopted from the cross-model
   consult). the night reads position, facing, stillness, timing — but
   records a verdict only when clearly witnessed; an unmet offer keeps
   no interpretation and leaves only an '…'. the system refuses to
@@ -187,7 +187,7 @@ him alone. per-file declarations: see the header of any source file.
 ## current state
 
 the submitted piece is **v2, "the excavated night"** — consolidated
-deadline morning on the author's word ("as is"). verification at
+on the author's word ("as is"). verification at
 freeze: full-night headless playthrough gate → fold, zero console
 errors, honest conduct-echo confirmed; twelve scenes sweep clean in
 lab; production build + smoke green. v1 is preserved whole at

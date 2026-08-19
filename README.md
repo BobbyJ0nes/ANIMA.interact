@@ -1,8 +1,8 @@
-# anima.interact
+# ANIMA.interact
 
 > working base for the anima interactive piece — the 06.06 dreamworld
 > materialised as a browser-hosted 3d liminal space.
-> art & ai module vehicle (IU000325) · started 17.08.26
+> art & ai module vehicle (IU000325)
 
 ## run it
 
@@ -27,7 +27,7 @@ as record.
 - the white lady (`she_dream` / 18.05.26) is **not** in this piece — another
   night, another register
 
-## settled ground — bobby, 17.08
+## settled ground — bobby
 
 - browser-hosted 3d liminal space
 - scenes: `the-castle-on-the-hill` · `fate-at-the-gate` · `the-cloakroom (/)`
@@ -37,7 +37,7 @@ as record.
   dream folds back to its start
 - structured but diffused — skeleton fixed, surface re-rendered per visit
 
-> accuracy note (fable, 19.08): `the-castle-on-the-hill` is where the writing
+> accuracy note (fable): `the-castle-on-the-hill` is where the writing
 > *starts* ("I met her at the castle on the hill") but it was built as horizon,
 > not as a walkable scene — it stands as the silhouette far north of the gate.
 > in the report and any claims: describe it as horizon; the walkable canon is
@@ -51,7 +51,7 @@ as record.
 > likeness drifts, **sentiment and archetype locked**. the trailers can be the
 > loading screen. the first line of the text is the world's one prohibition.
 
-## aesthetic direction — ideation 17.08 (open, not settled)
+## aesthetic direction — ideation (open, not settled)
 
 bobby's references: *touch* by supernova191919 (`inspo/touch_supernova/` —
 "a simulated system becomes a metaphor for existential meaning"), old
@@ -74,7 +74,7 @@ candidate rules (fable, for veto):
   model never fully settles
 - english is rare (stray rule) — most glyphs never resolve; leaning resolves
 
-## circuit v0 — built + walked 17.08.26
+## circuit v0 — built + walked
 
 - `npm i` then `npm run dev` → http://localhost:5199 · vite, plain js
   (this v0 walk used three.js; the shipped piece at `/term.html` does not —
@@ -103,7 +103,7 @@ candidate rules (fable, for veto):
 > local models later. the visit counter phrased through fate's own line
 > is an editorial choice — veto freely.
 
-## field_01 — the field takes form (study · 17.08)
+## field_01 — the field takes form (study)
 
 the world-material candidate: a navigable night of ~28k coloured glyphs
 (one instanced draw, everything in the shader). run the dev server →
@@ -127,7 +127,7 @@ the world-material candidate: a navigable night of ~28k coloured glyphs
 > heart, the lady's torso) — feature or bug is bobby's call. legibility
 > vs point-cloud-density is the live calibration axis.
 
-## engine + venue — research 17.08 (fable, for decision)
+## engine + venue — research (fable, for decision)
 
 - **blender mcp is first-class now** — anthropic ships an official blender
   connector (claude for creative work); ahujasid/blender-mcp remains the
@@ -151,7 +151,7 @@ the world-material candidate: a navigable night of ~28k coloured glyphs
   runtime; itch + own domain as venue. unity/godot only if the piece
   outgrows dream-walk verbs — a gate, not a closed door.
 
-## the form-shop pipeline — proven 18.08
+## the form-shop pipeline — proven
 
 blender 5.2 (upgraded via winget) · blender-mcp addon installed + enabled ·
 mcp server registered user-scope in claude code (`uvx blender-mcp`) —
@@ -168,14 +168,14 @@ procedural lady for likeness comparison. shot: `shots/field01_6_*`.
 > viewport) → re-export the glb → refresh the page. sculpt there,
 > condense here.
 
-18.08, second pass through the same wire: **fate** (hooded metaball
+second pass through the same wire: **fate** (hooded metaball
 figure, leaning 4°, pen-hand extended — `fate_v1.glb`, 544 verts) and
 **the gate** (posts, finials, nine bars, bead-arch — `gate_v1.glb`,
 445 verts). `loadShopForm` now takes per-form height + colours and
 recentres blender placement offsets. **`/field.html?shop`** = review
 mode, shop forms only, short holds. shots: `field01_7..9_*`.
 
-## scene_01 — the shop's scenes, walkable (18.08)
+## scene_01 — the shop's scenes, walkable
 
 **`/scene.html`** — first-person walk through real geometry from the shop:
 the gate + fate at spawn under moonlight, the strawberry field a short
@@ -197,7 +197,7 @@ mysticism, soft web, anti-models, instruments, specimens). every block
 carries a *take*; edit the BLOCKS array in `board.html` to grow it.
 images live in `public/ref/`.
 
-## termfield_01 — the page renders the night (study · 18.08)
+## termfield_01 — the page renders the night (study)
 
 bobby's pivot: *forget 3d in the standard context* — track inputs and map
 the dreamworld onto a plane of ascii. so: **`/term.html`** is a software
@@ -212,7 +212,7 @@ sits in front). `src/term/main.js`, one file, ~400 lines.
 - **the water is the writing** — where the land sinks under the level at
   the south edge, cells become the text's own letters, cycling identity.
   the sea at the edge of the world is literally the text. the dive-site.
-- the sky (reworked 18.08 after "sky looks shit"): a fixed **star
+- the sky (reworked after "sky looks shit"): a fixed **star
   catalog** at infinite distance — real parallax on turning, brightness
   hierarchy (dots mostly; letters rare), twinkle, the whole night
   rotating once per ~26 min — and a small **cratered typographic moon**
@@ -241,7 +241,7 @@ sits in front). `src/term/main.js`, one file, ~400 lines.
 - dev: `window.term.cam(x,z,yaw,pitch)` · `.state()` · `.style(name)` ·
   `.toggle('glow'|'scan'|'vig'|'letters')` · `.scale(n)`
 
-**style system (18.08, same day)** — six registers, live-switchable
+**the style system** — six registers, live-switchable
 (keys 1–6, persisted, `?style=name` deep-links), each a full re-voicing
 of the same world: **night** (baseline + indigo horizon glow) ·
 **folio** (gold land, lapis water, ember horizon, glow — the
@@ -264,7 +264,7 @@ density. contact sheet: `shots/term01_style_*.png`.
 > into forms — next part), and the sibling reading of the pivot (the
 > writing lying on a literal page whose surface rises into relief).
 
-## termfield_02 — the split (18.08 · parallel build)
+## termfield_02 — the split (parallel build)
 
 the field became a world-system. `src/term/` is now: **engine.js** (the
 typesetting renderer, scene-agnostic) · **env.js** (the environment-state
@@ -310,7 +310,7 @@ the process doc):
 full-circuit sweep: 7 scenes × zero console errors, cycling + recorded
 env verified. shots: `shots/scene_*` (builders' vantages) + sweeps.
 
-**divergence 19.08** — seven exploration forks (water/sky/ground/
+**divergence** — seven exploration forks (water/sky/ground/
 beings/concepts/submission/eeg-subconscious) branched and returned:
 five walkable experiment scenes (`x_sea`, `x_sky`, `x_ground`,
 `x_beings`, `x_latent` — in the `,`/`.` cycle), full docs in
@@ -326,7 +326,7 @@ engine warts collected from the builders (line axis is x-only, line x
 offset is legacy-compensated, single-cell beings weave open at <5m) —
 noted for the next engine pass, not silently fixed.
 
-## the margin voice — 19.08, on "story too fragmented / not intuitive"
+## the margin voice — on "story too fragmented / not intuitive"
 
 bobby's second verdict: environments and vibe hold; the story doesn't
 come through, and the night isn't intuitive. diagnosis: the narrator-
@@ -356,7 +356,7 @@ so the wait is one honest cycle (~36 s verified).
 
 full narrated playthrough green, zero console errors, twice.
 
-## the night — 19.08, on "still not doing it for me" → "build it"
+## the night — on "still not doing it for me" → "build it"
 
 bobby's verdict on the museum: doesn't gel, doesn't hold the weight.
 diagnosis (agreed): the piece had the dream's language but not its
@@ -391,7 +391,7 @@ verified: full headless playthrough, gate to fold, zero console
 errors (the wait took a real 32 s); lab sweep still ALL CLEAN.
 shots: `shots/night_01..11_*`.
 
-## the adopt wave — 19.08, on "go, full adopt list"
+## the adopt wave — on "go, full adopt list"
 
 everything ranked in `explorations/CONVERGENCE.md` landed in one wave,
 twelve scenes sweeping clean after: **engine** — per-scene `water()`
@@ -410,7 +410,7 @@ every source file carries an ai-use header (brief requirement);
 `PROCESS.md` assembles the whole record. still parked for bobby:
 repo + hosting + captured walk (need his accounts + a publish word).
 
-## settled 19.08 — bobby's verdicts on the convergence brief
+## settled — bobby's verdicts on the convergence brief
 
 - **visitation locked** (with misrecognition) — the interactor is a
   guest; figures may look past them, searching for someone else
@@ -426,14 +426,14 @@ repo + hosting + captured walk (need his accounts + a publish word).
   its subconscious question as the crossing/unshaped pair: the named map
   and the unshaped ground, performing the solipsist tension
 
-## versioned — the-night_v1 (19.08, frozen)
+## versioned — the-night_v1 (frozen)
 
-the night as walked on 19.08 (`?fresh` entrance, margin voice, full
+the night as walked (`?fresh` entrance, margin voice, full
 green playthrough) is snapshotted whole at `versions/the-night_v1/`
 with a `VERSION.md`. v2 forks from it in place; the frozen copy is
 the reference point for every verdict that follows.
 
-## v2 — the excavated night (19.08, one structured wave)
+## v2 — the excavated night (one structured wave)
 
 bobby's note: story-mode navigation; dialogue and prose bigger,
 immersive, navigable; characters with form, depth, autonomy; an
@@ -493,7 +493,7 @@ errors; the fold swapped an honest echo (a teleporting camera earned
 only tongue/menu/leave/sea — everything unwitnessed stayed
 unrecorded); twelve scenes sweep clean in lab.
 
-## the widened corpus — cited register (settled 19.08)
+## the widened corpus — cited register (settled)
 
 v2 adopts corpus widening (convergence law 8): a display line may come
 from any typed entry in the author's journal, cited file:line in the
@@ -520,9 +520,9 @@ every mechanic stands. the register, for the record and for revision:
   (the drift/jacket cues are the queue) · the tried-coat echo reads
   when a crossing sends wind through the coats
 
-## settled 19.08 — the submission shape
+## settled — the submission shape
 
-- **v2 ships as the piece** (bobby, deadline morning: "consolidate and
+- **v2 ships as the piece** (bobby: "consolidate and
   get a submission ready as is"). fully green: full-night playthrough,
   twelve-scene lab sweep, production build + smoke — zero errors.
 - **the walker's guide**: `GUIDE.md` (canonical) / `/guide.html` on the
@@ -538,8 +538,8 @@ every mechanic stands. the register, for the record and for revision:
 
 ## open (post-submission horizon)
 
-- the critical report — the author's alone, no AI prose (in progress
-  deadline morning; skeleton in `explorations/submission.md`)
+- the critical report — the author's alone, no AI prose (in progress;
+  skeleton in `explorations/submission.md`)
 - hosting push + walk-video upload — the author's accounts
 - model tier per figure (prompted base / shared voice-adapter /
   per-figure weights) — the report's horizon argument
@@ -548,5 +548,5 @@ every mechanic stands. the register, for the record and for revision:
 
 ---
 
-_provenance: settled-ground bullets are bobby's words (17.08 session);
+_provenance: settled-ground bullets are bobby's words (studio session);
 margin notes are fable's readings. update this file as decisions land._

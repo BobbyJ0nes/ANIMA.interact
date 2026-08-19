@@ -1,4 +1,4 @@
-/* ai-use: written by Claude (Fable 5) under direction, 19.08.26 — export tooling
+/* ai-use: written by Claude (Fable 5) under direction — export tooling
    only, no artwork content. Renders PROCESS.md and README.md to PDF for the
    Moodle bundle (the brief asks for the process doc "exported to a PDF or MD"). */
 const { chromium } = require('playwright');
@@ -7,9 +7,9 @@ const fs = require('fs');
 const path = require('path');
 
 const DOCS = [
-  ['PROCESS.md', 'PROCESS.pdf', 'ANIMA — process record'],
-  ['README.md', 'README_LOG.pdf', 'ANIMA — living log'],
-  ['GUIDE.md', 'GUIDE.pdf', 'ANIMA — the walker’s guide'],
+  ['PROCESS.md', 'PROCESS.pdf', 'ANIMA.interact — process record'],
+  ['README.md', 'README_LOG.pdf', 'ANIMA.interact — living log'],
+  ['GUIDE.md', 'GUIDE.pdf', 'ANIMA.interact — the walker’s guide'],
 ];
 const style = `<style>
   * { box-sizing: border-box; }
@@ -41,7 +41,7 @@ const style = `<style>
   for (const [src, out, title] of DOCS) {
     const md = fs.readFileSync(path.join(__dirname, '..', src), 'utf8');
     const html = `<!doctype html><meta charset="utf-8"><title>${title}</title>${style}
-      <div class="stamp">${title} · exported 19.08.2026 · anima.interact</div>` + marked.parse(md);
+      <div class="stamp">${title}  · ANIMA.interact</div>` + marked.parse(md);
     const tmp = path.join(__dirname, '_' + src.replace('.md', '.html'));
     fs.writeFileSync(tmp, html);
     await page.goto('file:///' + tmp.replace(/\\/g, '/'), { waitUntil: 'load' });

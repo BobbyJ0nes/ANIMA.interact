@@ -1,4 +1,4 @@
-# the walker's guide — anima.interact, the night
+# the walker's guide — ANIMA.interact
 
 > you need almost nothing: **wasd** walk · **drag** look · **shift** run ·
 > **space**. the writing tells you the rest as you go — the margin at the

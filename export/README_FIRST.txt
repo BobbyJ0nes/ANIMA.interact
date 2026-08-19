@@ -1,6 +1,6 @@
 ANIMA.interact — the night
 IU000325 Creative Making: Art & AI — submission bundle
-Bilaal Auleear (bilaal.auleear@gmail.com), 19.08.2026
+Bilaal Auleear (bilaal.auleear@gmail.com)
 
 WHAT THE PIECE IS
 The author's 06.06.26 dream-writing, typeset as a walkable night in a

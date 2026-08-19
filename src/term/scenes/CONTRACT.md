@@ -36,14 +36,14 @@ export default {
                                // g.letter=true + g.letterSeed=int for a letter
                                // cell. runs before fog; keep it branchy-cheap.
     water(wx, wz, w, t, env, cam) {},
-                               // OPTIONAL per-water-sample voice (19.08).
+                               // OPTIONAL per-water-sample voice.
                                // mutate w: w.lum, w.seed (letter index),
                                // w.band, w.blank=true to withhold the letter
                                // (ramp renders instead). wakes/glades/currents
                                // live here — see lib/wake.js
     face(wx, wz, wy, g, t, env) {},
                                // OPTIONAL per-fill-row hook for vertical
-                               // faces (19.08): rows well below the surface
+                               // faces: rows well below the surface
                                // sample get a second voice — cliff strata,
                                // wall texture. costs per-row; opt in only
                                // where faces matter
@@ -57,7 +57,7 @@ export default {
   sky: {},                     // {} = engine stars+moon · { none:true } = no sky
                                // { stars: 0.5 } scales count · { moon:false }
                                // { moon: { az, el, r, phase 0..1, halo, waver } }
-                               // NOTE (19.08): star counts also run the
+                               // NOTE: star counts also run the
                                // depletion arc — every scene visited, more
                                // stars have moved out. the sky band is
                                // narrow: nothing renders above tan-el ≈0.30.
@@ -75,9 +75,9 @@ export default {
   line: { text, x, z, y, radius, axis: 'x'|'z' },
                                // OPTIONAL proximity-typeset line (verbatim
                                // from the writing — typos preserved). the
-                               // legacy x-offset is GONE (19.08); letters
+                               // legacy x-offset is GONE; letters
                                // center on the anchor along `axis`.
-                               // DOCTRINE (19.08): signs type, beings
+                               // DOCTRINE: signs type, beings
                                // condense — a notice/menu/rule uses `line`;
                                // a speaking BEING uses engine condense():
                                //   import { condense } from '../engine.js'
@@ -110,7 +110,7 @@ their OWN mapping on top — one or two channels, legible, not everything.
 (path/berry/madder) · 6 warm (lamp/gold) · 7 near-white (fate/speech) ·
 8 far silhouette · 9 sky
 
-## v2 engine api (19.08 — the excavated night)
+## v2 engine api (the excavated night)
 
 frozen surface; scenes import from `../engine.js`:
 
@@ -138,7 +138,7 @@ frozen surface; scenes import from `../engine.js`:
   seed?, onVerdict})` — the faded hand (17.08.26): the night's shared
   choice grammar. call `hand.update(t, cam)` in beings() and concat its
   points. verdict fires once: 'taken' | 'declined' | 'unwitnessed'.
-  HONESTY (sol consult 19.08): conduct is not intention — only a
+  HONESTY (sol consult): conduct is not intention — only a
   witnessed taking or refusal is recorded. call choose() for 'taken' and
   'declined' ONLY; 'unwitnessed' keeps NO interpretation (the hand leaves
   an '…', the mark of what the system cannot honestly resolve). declining
@@ -148,7 +148,7 @@ frozen surface; scenes import from `../engine.js`:
   closes and lowers / thins to '…').
 - chapter pages are the director's business (night.js) — scenes never
   page. `?lab` never pages.
-- RENDER FACT (19.08, found in the v2 wave): for ground LETTER cells,
+- RENDER FACT (found in the v2 wave): for ground LETTER cells,
   `g.lum` only gates visibility (0.18–0.8) and picks ramp glyphs —
   it does not brighten. a traveling "pull" crest must be a BAND lift
   (e.g. 5 → 6 on the lit index), not a lum add. margin/narrate lines
@@ -170,10 +170,10 @@ implement as per-scene closures; no shared Being class.
 
 ## the rules that are not negotiable
 
-- **the interactor is a visitor, not the dreamer** (locked 19.08) —
+- **the interactor is a visitor, not the dreamer** (locked) —
   figures may misrecognize them; the piece never claims the visitor's
   interiority; the recorded night is his, walked as a guest
-- **the visitor is mute everywhere** (locked 19.08) — the tongue was
+- **the visitor is mute everywhere** (locked) — the tongue was
   paid at the gate; no affordance ever lets the visitor speak, type,
   or answer. figures speak; the visitor leans, waits, walks
 - prose in `line`/typeset text is VERBATIM from the writing, typos kept
