@@ -6,6 +6,14 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+  server: {
+    watch: {
+      // evidence and bundle dirs are written while the dev server runs
+      // (screenshots, PDFs, the walk video, version freezes) — watching
+      // them causes EBUSY crashes and phantom HMR reloads mid-verification
+      ignored: ['**/export/**', '**/shots/**', '**/versions/**'],
+    },
+  },
   build: {
     rollupOptions: {
       input: {
