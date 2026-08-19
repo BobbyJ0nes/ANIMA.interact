@@ -4,19 +4,51 @@
 > materialised as a browser-hosted 3d liminal space.
 > art & ai module vehicle (IU000325)
 
-## run it
+## run it — for the assessor
+
+requirements: node 18+ and npm. nothing else.
 
 ```
 npm install
-npm run dev        # → http://localhost:5199 — the landing routes you
+npm run dev        # → http://localhost:5199
 ```
 
-**the piece is `/term.html`** (the night; `?fresh` = a first night;
-`?lab` = free roam). the walker's guide: `GUIDE.md` or `/guide.html`.
-production build: `npm run build` → `dist/`. this file is the living
-log, newest sections toward the end — the v2 sections and the settled
-submission shape are the current state; everything above them is kept
-as record.
+open **http://localhost:5199** — the landing routes you into the piece.
+
+**walking the night** (`/term.html`, or `/term.html?fresh` for a first
+night with nothing remembered):
+
+- **wasd** walk · **drag the mouse** look · **shift** run · **space**
+  is the only button (finishes a typing line, turns a chapter page,
+  lowers a card)
+- the margin at the foot of the frame types the author's own sentences
+  as they become true — they are the night's only instructions
+- choices are conduct — where you stand, what you face, how long you
+  stay; declining anything never blocks the night
+- the night plays gate → cloakroom → willow → strawberry field →
+  the show → the boat → the fold, and begins again, remembering
+- stuck anywhere: `GUIDE.md` (or `/guide.html`) — part one walks every
+  stage; part two documents the navigation design
+
+**the other assets, same server:**
+
+- `/guide.html` — the walker's guide (also `GUIDE.md`, `export/GUIDE.pdf`)
+- `/term.html?lab` — process view: free roam, `,` / `.` cycle all
+  twelve scenes (canon + element studies), no director
+- `e` in the piece — toggle the environment source: **model**
+  (oscillators) vs **recorded** (the 06.06.26 writing session's own
+  EEG, replayed); keys `1–6` switch typographic registers
+- `/board.html` — the 98-block visual-language reference board
+- `/field.html` — the field study (the material, pre-night)
+- `/circuit.html` — circuit v0, the first walk (superseded, kept as record)
+- `source/06.06.26.txt` + `source/JOURNAL.md` — the writing the night
+  is built from · `PROCESS.md` — method + evidence · `shots/` —
+  verification frames · `versions/the-night_v1/` — the frozen prior form
+
+production build, if wanted: `npm run build` → `dist/`, serve statically.
+this file is the living log, newest sections toward the end — the v2
+sections and the settled submission shape are the current state;
+everything above them is kept as record.
 
 ## source material
 

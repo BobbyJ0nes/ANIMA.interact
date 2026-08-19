@@ -11,25 +11,22 @@ labeled. Every displayed prose sentence is the author's journal,
 verbatim, typos kept (the few utilitarian interface labels — the hint
 line, the honesty stamps — are listed as such in the repository README).
 
-HOW TO EXPERIENCE IT (in order of least friction)
-1. The hosted URL, if one is given in the Moodle text field — nothing to
-   install; the landing routes you to the night.
-2. This bundle's own copy of the piece (site/):
-     Windows — double-click RUN_SITE.bat
-     Mac/Linux — run:  sh RUN_SITE.sh
-   either serves the site at http://localhost:8123 and opens the browser
-   (keep the window open; refresh once if the browser beat the server).
-   Any static server works the same: from inside site/,
-   `python3 -m http.server 8123` or `npx serve -l 8123 .`
-   Note: double-clicking the .html files directly cannot work — browsers
-   refuse to run module scripts from a bare file, hence the tiny server.
-3. The repository: npm install; npm run dev; open /term.html.
-4. Watch it: walk_v2.webm — a captured 4.5-minute full walk of the
-   night, gate to fold.
-5. Read it: GUIDE.pdf — part one walks the night; part two documents the
-   navigation premises, logic, and reasoning (eleven rules).
-In the piece: wasd walk, drag look, space — the writing tells you the
-rest; "?fresh" on the url gives a first night.
+HOW TO EXPERIENCE IT
+1. THE REPOSITORY — the intended path. Requirements: node 18+ and npm,
+   nothing else.
+       npm install
+       npm run dev        ->  http://localhost:5199
+   The landing routes you into the night. Walk with wasd, look by
+   dragging, space is the only button; the margin types the author's
+   sentences as they become true — they are the instructions. The
+   repository README's "run it" section maps every asset (the piece,
+   the walker's guide, the lab view, the reference board, the studies).
+2. The hosted URL, if one is given in the Moodle text field — the same
+   piece, nothing to install.
+3. Watch it: walk_v2.webm in this bundle — a captured 4.5-minute full
+   walk, gate to fold.
+4. Read it: GUIDE.pdf — part one walks the night stage by stage; part
+   two documents the navigation premises, logic, and reasoning.
 
 THIS BUNDLE
 - [critical report PDF — the author's, added at upload]
@@ -40,11 +37,6 @@ THIS BUNDLE
   decision in chronological order
 - GUIDE.pdf — the walker's guide + navigation design record
 - walk_v2.webm — captured full-night walk (1280x720, WebM)
-- site/ — the built piece itself, self-contained. serve the folder with
-  any static file server (e.g. `npx serve site` or `python -m
-  http.server` inside it) and open /term.html — or just /, the landing
-  routes you. included so this bundle stands alone even without the
-  repository.
 - source/ — 06.06.26.txt (the spine entry, whole) and JOURNAL.md (the
   journal where it touches this night: censored verbatim excerpts,
   linked to their places in the piece)
