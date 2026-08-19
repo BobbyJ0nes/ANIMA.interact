@@ -76,7 +76,7 @@ export default {
   sky: { moon: { phase: 0.5, halo: true } }, // half-known, ringed in fog
   async init() {
     try {
-      const r = await fetch('/eeg/session01_latent.json');
+      const r = await fetch('eeg/session01_latent.json');
       if (r.ok) {
         const d = await r.json();
         LAT = {

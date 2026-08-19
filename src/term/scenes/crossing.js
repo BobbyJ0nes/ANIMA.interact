@@ -136,7 +136,7 @@ export default {
 
   async init() {
     try {
-      const r = await fetch('/eeg/session01.json');
+      const r = await fetch('eeg/session01.json');
       if (!r.ok) throw new Error('no recording');
       const d = await r.json();
       L = Math.max(60, Math.ceil(d.n / 10));

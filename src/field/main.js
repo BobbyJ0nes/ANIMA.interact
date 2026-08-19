@@ -94,11 +94,11 @@ const SEQ = [
       if (f) shop.push({ name, make: f, at, hold });
     } catch { /* the shop hasn't made this one yet */ }
   };
-  await tryLoad('the lady, from the shop', '/forms/lady_v1.glb',
+  await tryLoad('the lady, from the shop', 'forms/lady_v1.glb',
     { height: 3.4 }, new THREE.Vector3(0, 0, -12), 20);
-  await tryLoad('fate, from the shop', '/forms/fate_v1.glb',
+  await tryLoad('fate, from the shop', 'forms/fate_v1.glb',
     { height: 3.7, base: 0x8fa2c8, bright: 0xd8e2f5, count: 1200 }, new THREE.Vector3(3.6, 0, -11), 16);
-  await tryLoad('the gate, from the shop', '/forms/gate_v1.glb',
+  await tryLoad('the gate, from the shop', 'forms/gate_v1.glb',
     { height: 5.0, base: 0x55627e, bright: 0x8a9ab8, count: 1700 }, new THREE.Vector3(-5, 0, -13), 16);
   if (new URLSearchParams(location.search).has('shop')) {
     SEQ.length = 0;
