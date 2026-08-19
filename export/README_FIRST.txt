@@ -12,19 +12,20 @@ verbatim, typos kept (the few utilitarian interface labels — the hint
 line, the honesty stamps — are listed as such in the repository README).
 
 HOW TO EXPERIENCE IT
-1. RUN THE PIECE — from the repository, or identically from this
-   bundle's code/ folder. Requirements: node 18+ and npm, nothing else.
+1. HOSTED — nothing to install:
+       https://bobbyj0nes.github.io/ANIMA.interact/
+   The landing routes you into the night. Walk with wasd, look by
+   dragging, space is the only button; the margin types the author's
+   sentences as they become true — they are the instructions.
+2. RUN IT YOURSELF — from the repository
+   (https://github.com/BobbyJ0nes/ANIMA.interact), or identically from
+   this bundle's code/ folder. Requirements: node 18+ and npm.
        cd code        (if using this bundle)
        npm install
        npm run dev        ->  http://localhost:5199
-   The landing routes you into the night. Walk with wasd, look by
-   dragging, space is the only button; the margin types the author's
-   sentences as they become true — they are the instructions. The
-   README's "run it" section (in code/ and the repository) maps every
-   asset (the piece, the walker's guide, the lab view, the reference
-   board, the studies).
-2. The hosted URL, if one is given in the Moodle text field — the same
-   piece, nothing to install.
+   The README's "run it" section (in code/ and the repository) maps
+   every asset (the piece, the walker's guide, the lab view, the
+   reference board, the studies).
 3. Watch it: walk_v2.webm in this bundle — a captured 4.5-minute full
    walk, gate to fold.
 4. Read it: GUIDE.pdf — part one walks the night stage by stage; part

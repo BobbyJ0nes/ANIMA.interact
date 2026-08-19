@@ -6,7 +6,11 @@
 
 ## run it — for the assessor
 
-requirements: node 18+ and npm. nothing else.
+**hosted, nothing to install:**
+https://bobbyj0nes.github.io/ANIMA.interact/ — the landing routes you
+into the night.
+
+**or locally** — requirements: node 18+ and npm, nothing else.
 
 ```
 npm install
