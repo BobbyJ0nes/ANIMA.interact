@@ -1,0 +1,9 @@
+# heavy / third-party — never ship (inspo alone is ~1.3GB of someone else's game)
+inspo/
+node_modules/
+dist/
+
+# transient
+*.log
+.DS_Store
+Thumbs.db

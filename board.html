@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>anima · reference board</title>
+<style>
+  :root{
+    --bg:#05070e; --ink:#e8e2d5; --dim:rgba(232,226,213,.55); --faint:rgba(232,226,213,.32);
+    --card:#0a0d16; --line:rgba(232,226,213,.1); --accent:#8a9ab8;
+  }
+  html,body{margin:0;background:var(--bg);color:var(--ink);
+    font:14px/1.6 Georgia,'Times New Roman',serif}
+  a{color:inherit;text-decoration:none}
+  .mono{font-family:ui-monospace,Consolas,monospace}
+
+  header{padding:38px 26px 10px;max-width:1700px;margin:0 auto}
+  header h1{font-weight:400;font-size:20px;letter-spacing:.3em;margin:0}
+  header .sub{color:var(--dim);font-size:12.5px;margin-top:8px;max-width:52rem;font-style:italic}
+  header .meta{color:var(--faint);font-size:10px;letter-spacing:.1em;margin-top:10px}
+
+  nav{position:sticky;top:0;background:rgba(5,7,14,.92);backdrop-filter:blur(6px);
+    z-index:5;border-bottom:1px solid var(--line);padding:10px 26px;
+    display:flex;flex-wrap:wrap;gap:6px;align-items:center;max-width:1700px;margin:0 auto}
+  nav button{background:none;border:1px solid var(--line);color:var(--dim);cursor:pointer;
+    font:10px ui-monospace,monospace;letter-spacing:.06em;padding:4px 9px;border-radius:2px}
+  nav button:hover{border-color:var(--dim)}
+  nav button.on{background:rgba(232,226,213,.12);color:var(--ink);border-color:var(--dim)}
+  nav input{background:var(--card);border:1px solid var(--line);color:var(--ink);
+    font:11px ui-monospace,monospace;padding:5px 9px;border-radius:2px;width:170px;margin-left:auto}
+  nav input:focus{outline:none;border-color:var(--dim)}
+
+  #count{color:var(--faint);font-size:10px;letter-spacing:.08em;padding:12px 26px 0;max-width:1700px;margin:0 auto}
+
+  #board{columns:4 300px;column-gap:14px;padding:14px 26px 80px;max-width:1700px;margin:0 auto}
+  .block{break-inside:avoid;margin:0 0 14px;background:var(--card);border:1px solid var(--line);
+    border-radius:3px;overflow:hidden;position:relative;transition:border-color .25s}
+  .block:hover{border-color:rgba(232,226,213,.3)}
+  .block img{width:100%;display:block;filter:saturate(.96)}
+  .body{padding:12px 14px 13px}
+  .tag{font:9px ui-monospace,monospace;letter-spacing:.14em;color:var(--faint);text-transform:lowercase}
+  .tag b{color:var(--chc,var(--accent));font-weight:400}
+  .title{font-size:14.5px;margin:5px 0 6px;letter-spacing:.01em}
+  .take{color:var(--dim);font-size:12px;font-style:italic}
+  .lnk{display:inline-block;margin-top:8px;font:9.5px ui-monospace,monospace;
+    letter-spacing:.1em;color:var(--faint);border-bottom:1px solid var(--line);padding-bottom:1px}
+  .block:hover .lnk{color:var(--ink);border-color:var(--dim)}
+
+  .swatches{display:flex;height:52px}
+  .swatches div{flex:1}
+  .ramp{font:26px/1 ui-monospace,monospace;letter-spacing:.12em;padding:22px 14px 6px;color:var(--ink);
+    text-shadow:0 0 18px rgba(232,226,213,.35);white-space:nowrap;overflow-x:auto}
+  .typespec{padding:20px 14px 4px;font-size:17px;font-style:italic;line-height:1.7}
+  .typespec.mono{font:13px ui-monospace,monospace;font-style:normal;letter-spacing:.08em;color:var(--dim)}
+  .chips{display:flex;gap:6px;flex-wrap:wrap;padding:18px 14px 2px}
+  .chips span{font:10px ui-monospace,monospace;letter-spacing:.12em;border:1px solid var(--line);
+    padding:3px 8px;border-radius:2px;color:var(--dim)}
+  .rule .title{font-style:italic}
+  .rule .body{padding-top:16px}
+
+  footer{color:var(--faint);font:10px ui-monospace,monospace;letter-spacing:.1em;
+    padding:0 26px 40px;max-width:1700px;margin:0 auto}
+  @media (max-width:700px){ #board{columns:2 160px} header{padding-top:24px} }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>بصيرة · A N I M A — reference board</h1>
+  <div class="sub">a visual language + resource map for the dreamworld. rooted in the writing,
+    radiating outward. every block carries a <b>take</b> — what to extract, not just what it is.
+    the refusals are a channel too.</div>
+  <div class="meta mono">anima.interact · 18.08.26 · are.na energy, vault residency · click a channel to filter · everything links out</div>
+</header>
+
+<nav id="nav"></nav>
+<div id="count" class="mono"></div>
+<div id="board"></div>
+<footer>the board is a specimen of the language it maps. add blocks by editing BLOCKS in this file — it's just data.</footer>
+
+<script>
+const CHANNELS = [
+  ['seed','the seed — his own hand','#a8b8d8'],
+  ['glyph','glyph matter · text as world','#7ad890'],
+  ['dream','dream logic · liminal worlds','#b89ad8'],
+  ['being','small being, vast world','#d8a878'],
+  ['kind','tile kindness · few verbs','#8ad8c8'],
+  ['folio','the illuminated register','#d8b860'],
+  ['light','light in darkness','#ffa14d'],
+  ['mystic','computational mysticism','#9fd8e8'],
+  ['soft','the soft web','#e8a8c8'],
+  ['anti','anti-models — what we refuse','#d87878'],
+  ['tool','instruments + techniques','#8a9ab8'],
+  ['spec','specimens — the language itself','#e8e2d5'],
+];
+
+// {c:channel, t:type, n:title, k:take, l:link, img/swatch/ramp/type/chips/rule}
+const BLOCKS = [
+// —— the seed
+{c:'seed',t:'own',n:'the writing, photographed',k:'06.06.26 in textedit on the dead-battery macbook. everything on this board serves this text.',img:'/ref/writing_screen.png'},
+{c:'seed',t:'own',n:'the biosignal folio',k:'the 74 minutes that wrote the dream, rendered as instrument — gold leaf and honesty labels already present.',img:'/ref/biosignal_folio.png'},
+{c:'seed',t:'own',n:'the field takes form — the lady',k:'first condensation. likeness drifts, sentiment locked.',img:'/ref/field01_1_lady.png'},
+{c:'seed',t:'own',n:'the line settles',k:'prose typeset from the field’s own letters. english stays rare, so english stays precious.',img:'/ref/field01_2_line.png'},
+{c:'seed',t:'own',n:'the gate, from the shop',k:'blender → glb → glyphs. the mid-condense swarm is the aesthetic, not a loading state.',img:'/ref/field01_9_shop_gate.png'},
+{c:'seed',t:'own',n:'the willow + the unseen mage',k:'the lantern glows behind the curtain of strands. the unseen stays unseen.',img:'/ref/field01_5_willow.png'},
+{c:'seed',t:'own',n:'folio register, one click',k:'the whole night turns gold. districts can hold different registers; home must be chosen.',img:'/ref/field01_10_tune_folio.png'},
+{c:'seed',t:'own',n:'the pass',k:'consent architecture as typography — the dream’s terms of entry are scene one.',img:'/ref/v0_02_pass.png'},
+{c:'seed',t:'own',n:'the tired lamp (circuit v0)',k:'a scene where nothing happens except a lamp’s 26-second cycle. defend its emptiness.',img:'/ref/v0_05_streetlamp.png'},
+{c:'seed',t:'own',n:'the boat behind the blue panel',k:'the fold’s landing. safety is a rod in the emergency pack.',img:'/ref/v0_09_boat.png'},
+{c:'seed',t:'own',n:'the lamp, real geometry',k:'blender keyframes playing live in the browser — behaviour travels as data.',img:'/ref/scene01_2_lamp.png'},
+{c:'seed',t:'own',n:'à toi — the rose field',k:'the ascii-field lineage starts here: green on black, a gift object with a CNAME.',l:null},
+{c:'seed',t:'own',n:'seventeen',k:'his poem mapped over video as ascii — the taste benchmark from the JS era.',l:null},
+
+// —— glyph matter
+{c:'glyph',t:'work',n:'Apollinaire — Calligrammes (1918)',k:'concrete poetry: text taking the shape of its subject. the deep ancestor of glyph-beings.',l:'https://en.wikipedia.org/wiki/Calligrammes'},
+{c:'glyph',t:'theory',n:'concrete poetry — Gomringer / Noigandres',k:'composition as constellation: words placed in space, not flowed in lines.',l:'https://en.wikipedia.org/wiki/Concrete_poetry'},
+{c:'glyph',t:'work',n:'ANSI / demoscene ascii art',k:'character grids as craft culture — density ramps, dither, crews signing work. the ramp has a lineage.',l:'https://en.wikipedia.org/wiki/ASCII_art'},
+{c:'glyph',t:'work',n:'digital rain — GITS → The Matrix',k:'the cliché to honour and swerve: rain is weather with no author. ours condenses into beings that belong to a text.',l:'https://en.wikipedia.org/wiki/Matrix_digital_rain'},
+{c:'glyph',t:'tool',n:'aalib / libcaca',k:'renderers that see the world in characters — the renderer as worldview.',l:'https://en.wikipedia.org/wiki/AAlib'},
+{c:'glyph',t:'artist',n:'Everest Pipkin',k:'soft tools and tiny generative worlds; deep care for handmade computation. already cited in snake-journal.',l:'https://everest-pipkin.com'},
+{c:'glyph',t:'artist',n:'Devine Lu Linvega / Hundred Rabbits',k:'uxn, permacomputing: a whole cosmology from small machines and glyphs. discipline as aesthetic.',l:'https://100r.co'},
+{c:'glyph',t:'artist',n:'Dia Studio',k:'kinetic type as identity — letters with behaviour. type with physics is a voice.',l:'https://dia.tv'},
+{c:'glyph',t:'own',n:'GALLEY / pretext',k:'“what becomes possible when an interface can know the shape of language before showing it?” — the toolbench arrived before the piece.',l:null},
+
+// —— dream logic
+{c:'dream',t:'game',n:'Yume Nikki (2004)',k:'the canonical dream-walk: no goals, doors, dread and tenderness side by side. effects as verbs.',l:'https://en.wikipedia.org/wiki/Yume_Nikki'},
+{c:'dream',t:'game',n:'LSD: Dream Emulator (1998)',k:'dream logic as engine — touch anything, cut anywhere. the graph IS the dream.',l:'https://en.wikipedia.org/wiki/LSD:_Dream_Emulator'},
+{c:'dream',t:'game',n:'Kentucky Route Zero',k:'magical-realist staging; text as scenery; a theatre inside the game. the theatre scene’s closest cousin.',l:'http://kentuckyroutezero.com'},
+{c:'dream',t:'film',n:'The Science of Sleep — Gondry',k:'“a film which tends to find people at the right time.” handmade dream materiality — cardboard sincerity over CG polish.',l:'https://en.wikipedia.org/wiki/The_Science_of_Sleep'},
+{c:'dream',t:'film',n:'Paprika — Satoshi Kon',k:'parade logic and cuts that lie honestly — edit grammar for the fold.',l:'https://en.wikipedia.org/wiki/Paprika_(2006_film)'},
+{c:'dream',t:'work',n:'Little Nemo in Slumberland (1905)',k:'the bed drifts, the panel tilts: dream architecture on paper, 120 years early. wake-up as punchline = the fold.',l:'https://en.wikipedia.org/wiki/Little_Nemo'},
+{c:'dream',t:'game',n:'Anodyne',k:'zelda grammar dreamed wrong on purpose — familiar verbs, unfamiliar rooms.',l:'https://en.wikipedia.org/wiki/Anodyne_(video_game)'},
+{c:'dream',t:'theory',n:'liminal space vernacular',k:'the internet’s shared dream-architecture. useful weather; avoid the meme’s gravity.',l:'https://en.wikipedia.org/wiki/Liminal_space_(aesthetic)'},
+{c:'dream',t:'work',n:'Cowboy Bebop — the sign-off',k:'see you space cowboy: the episodic fold, melancholy with swing. a session-end card is a mercy.',l:'https://en.wikipedia.org/wiki/Cowboy_Bebop'},
+
+// —— small being, vast world
+{c:'being',t:'game',n:'Stray',k:'the biggest star in this sky: small being low to the ground, a world that speaks glyphs you can’t read, companion as translator, diegetic UI.',l:'https://en.wikipedia.org/wiki/Stray_(video_game)'},
+{c:'being',t:'game',n:'touch — supernova191919',k:'the vignette in the inspo folder: “a simulated system becomes a metaphor for existential meaning.” small + sincere lands.',l:'https://supernova191919.itch.io/'},
+{c:'being',t:'game',n:'Journey',k:'wordless encounter between strangers; meaning through scale, scarf and sand. the interactor never needs instructions.',l:'https://en.wikipedia.org/wiki/Journey_(2012_video_game)'},
+{c:'being',t:'game',n:'Sable',k:'moebius linework, errand-quiet coming-of-age. tone reference for gentleness without emptiness.',l:'https://en.wikipedia.org/wiki/Sable_(video_game)'},
+{c:'being',t:'game',n:'A Short Hike',k:'kindness as a design system — every mechanic forgives.',l:'https://en.wikipedia.org/wiki/A_Short_Hike'},
+{c:'being',t:'game',n:'Shadow of the Colossus',k:'vast melancholy; the forbidden land as mood. scale as loneliness’s instrument.',l:'https://en.wikipedia.org/wiki/Shadow_of_the_Colossus'},
+{c:'being',t:'game',n:'Outer Wilds',k:'curiosity as the only progression — knowledge is the item. attention rewarded is the whole economy.',l:'https://en.wikipedia.org/wiki/Outer_Wilds'},
+{c:'being',t:'game',n:'Ico',k:'hand-holding as the entire mechanic — contact as language.',l:'https://en.wikipedia.org/wiki/Ico'},
+
+// —— tile kindness
+{c:'kind',t:'game',n:'Pokémon — GBA era',k:'tile kindness: readable world, one interact verb, warm night palettes. the friendliness is engineered.',l:'https://en.wikipedia.org/wiki/Pok%C3%A9mon_Ruby_and_Sapphire'},
+{c:'kind',t:'game',n:'Zelda: Link’s Awakening',k:'bounded rooms, secrets that reward attention — and the whole island is a dream that ends when the dreamer wakes. literally this project’s plot cousin.',l:'https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Link%27s_Awakening'},
+{c:'kind',t:'game',n:'Hyper Light Drifter',k:'wordless UI, NPCs speaking in pictograms, neon against dark. glyph-speech shipped and beloved.',l:'https://en.wikipedia.org/wiki/Hyper_Light_Drifter'},
+{c:'kind',t:'theory',n:'the verb budget',k:'zelda’s lesson stated plainly: few verbs, never changing, world does the variety. approach · lean · wait · take · leave.',l:null},
+
+// —— the illuminated register
+{c:'folio',t:'work',n:'Jung — The Red Book',k:'the actual object: a psyche illuminated by its own hand over 16 years. the EEG folio already quotes it.',l:'https://en.wikipedia.org/wiki/The_Red_Book_(Jung)'},
+{c:'folio',t:'work',n:'Islamic manuscript illumination',k:'gold as reverence, geometry as devotion, margins as architecture. the folio palette’s true source.',l:'https://en.wikipedia.org/wiki/Islamic_illumination'},
+{c:'folio',t:'work',n:'The Book of Kells',k:'beings living INSIDE letters — the glyph as inhabited world, 1200 years old.',l:'https://en.wikipedia.org/wiki/Book_of_Kells'},
+{c:'folio',t:'artist',n:'William Blake — illuminated printing',k:'poet-printer-engineer: text and image fused because he owned the means. part-time artist, full-time engineer, 1794.',l:'https://en.wikipedia.org/wiki/William_Blake'},
+{c:'folio',t:'book',n:'Ibn Tufayl — Hayy Ibn Yaqzan',k:'the solitary knower’s ascent — already in the corpus; the dreamworld is its garden.',l:'https://en.wikipedia.org/wiki/Hayy_ibn_Yaqdhan'},
+
+// —— light in darkness
+{c:'light',t:'artist',n:'Todd Hido — Houses at Night',k:'the streetlamp scene already exists in photography: fog, sodium glow, one warm window. study the exposures.',l:'https://www.toddhido.com'},
+{c:'light',t:'artist',n:'Gregory Crewdson',k:'suburban twilight staged like theatre — the uncanny of the lit street.',l:'https://en.wikipedia.org/wiki/Gregory_Crewdson'},
+{c:'light',t:'artist',n:'James Turrell',k:'light as material, thresholds as rooms. the palace dream’s waving light has a practice.',l:'https://en.wikipedia.org/wiki/James_Turrell'},
+{c:'light',t:'artist',n:'Doug Wheeler',k:'the infinity room: space with no edges — the void between scenes, built physically.',l:'https://en.wikipedia.org/wiki/Doug_Wheeler_(artist)'},
+{c:'light',t:'artist',n:'Rinko Kawauchi',k:'breath-scale attention to small light. the moss whisper, photographic.',l:'https://rinkokawauchi.com'},
+{c:'light',t:'theory',n:'dark ride grammar',k:'theatre → boat → fold is literally a ghost-train form: scene-per-turn, pepper’s ghost, the vehicle as narrator.',l:'https://en.wikipedia.org/wiki/Dark_ride'},
+
+// —— computational mysticism
+{c:'mystic',t:'work',n:'Serial Experiments Lain',k:'the wired as spirit world; CRT hum as presence. computational mysticism’s canon, and its warning about dissolving.',l:'https://en.wikipedia.org/wiki/Serial_Experiments_Lain'},
+{c:'mystic',t:'film',n:'Ghost in the Shell (1995)',k:'“the net is vast and infinite” — dissolution as transcendence; also the rain, the market, the dive.',l:'https://en.wikipedia.org/wiki/Ghost_in_the_Shell_(1995_film)'},
+{c:'mystic',t:'artist',n:'Ian Cheng — BOB / Emissaries',k:'entities with inner lives; simulation as garden you tend, not control. what “autonomous figure” means at art scale.',l:'https://iancheng.com'},
+{c:'mystic',t:'artist',n:'Holly Herndon — Holly+',k:'a voice as commons with a constitution. consent architecture shipped to production — your essay’s second case study.',l:'https://holly.plus'},
+{c:'mystic',t:'artist',n:'Lauren Lee McCarthy — LAUREN',k:'she became the smart home: the named body inside the system. the essay’s spine; the dreamworld’s ethical licence.',l:'https://lauren-mccarthy.com'},
+{c:'mystic',t:'book',n:'K Allado-McDowell — Pharmako-AI',k:'co-writing with the model as psychedelic practice — neural media meeting psyche on purpose.',l:'https://ignota.org/products/pharmako-ai'},
+{c:'mystic',t:'artist',n:'Memo Akten — Learning to See',k:'the model hallucinating meaning from noise, beautifully, honestly. confabulation as subject.',l:'https://www.memo.tv'},
+{c:'mystic',t:'artist',n:'Ryoji Ikeda — datamatics',k:'data as sublime — but COLD. study the craft and precision; refuse the temperature.',l:'https://www.ryojiikeda.com'},
+
+// —— the soft web
+{c:'soft',t:'artist',n:'Intranet Girl',k:'london 3Dx: blender-native y2k cyberspace with jungle in its blood. proof the machine can be a bedroom, not a lab — and her tutorials teach the tools.',l:'https://www.instagram.com/intranetgirl/'},
+{c:'soft',t:'artist',n:'Laurel Schwulst',k:'the website as room, garden, puddle — ambient web philosophy. the URL as place.',l:'https://laurelschwulst.com'},
+{c:'soft',t:'work',n:'html.energy',k:'the handmade web as a practice of care. writing html like keeping a garden.',l:'https://html.energy'},
+{c:'soft',t:'artist',n:'Rafaël Rozendaal',k:'the URL as artwork, one feeling per domain. à toi already lives in this tradition.',l:'https://www.newrafael.com'},
+{c:'soft',t:'artist',n:'Nathalie Lawhead',k:'software as zine, error as charm — interfaces that feel like being handed a friendship bracelet.',l:'https://alienmelon.itch.io'},
+{c:'soft',t:'tool',n:'Are.na',k:'blocks, channels, connections over feeds — the board as thought-form. this page’s parent.',l:'https://www.are.na'},
+{c:'soft',t:'tool',n:'Cosmos',k:'the visual clustering mind — curation as spatial act. this page’s other parent.',l:'https://www.cosmos.so'},
+
+// —— anti-models
+{c:'anti',t:'artist',n:'Refik Anadol',k:'the anti-model with the best craft: archive-scale point clouds, museum sublime, zero intimacy. take the instancing; refuse the temperature. 706 entries beat 100 million images.',l:'https://refikanadol.com'},
+{c:'anti',t:'work',n:'screensaver matrix rain',k:'characters as weather with no author are wallpaper. the field’s letters belong to a text — that’s the entire difference.',l:null},
+{c:'anti',t:'work',n:'asset-store liminal spaces',k:'backrooms-core without a body inside. atmosphere is not meaning; a district needs a resident.',l:null},
+{c:'anti',t:'work',n:'gamified streak UI',k:'no guilt mechanics in a dream. absence is weather — your own standing rule.',l:null},
+{c:'anti',t:'work',n:'the corporate AI gradient',k:'the aesthetic of nothing in particular. if a palette could sell SaaS, re-roll it.',l:null},
+
+// —— instruments + techniques
+{c:'tool',t:'tool',n:'TouchDesigner POPs',k:'GPU points as first-class citizens — the material’s native realtime runtime. installed, licensed, waiting on s04.',l:'https://derivative.ca'},
+{c:'tool',t:'resource',n:'elekktronaut — bileam tschepe',k:'TD teaching from inside your aesthetic neighbourhood: organic, typographic, patient.',l:'https://www.youtube.com/@elekktronaut'},
+{c:'tool',t:'resource',n:'paketa12',k:'particle sorcery, terse and deep. watch to see what TD mastery looks like.',l:'https://www.youtube.com/@paketa12'},
+{c:'tool',t:'resource',n:'The Interactive & Immersive HQ',k:'the most current POPs teaching anywhere.',l:'https://interactiveimmersive.io'},
+{c:'tool',t:'tool',n:'blender-mcp',k:'the form-shop’s agent hands — wired to this vault. sculpt there, condense here.',l:'https://github.com/ahujasid/blender-mcp'},
+{c:'tool',t:'tool',n:'MeshSurfaceSampler — three.js',k:'any mesh → condensation targets in forty lines. the blender bridge in one class.',l:'https://threejs.org/docs/#examples/en/math/MeshSurfaceSampler'},
+{c:'tool',t:'tool',n:'pretext — chenglou',k:'text measurement as superpower: metric-true settles. GALLEY’s engine, the voice study’s future.',l:'https://github.com/chenglou'},
+{c:'tool',t:'resource',n:'The Book of Shaders',k:'fragment thinking, gently taught — for when the field’s shader wants growing.',l:'https://thebookofshaders.com'},
+{c:'tool',t:'resource',n:'Inigo Quilez — SDFs',k:'distance fields: form as math — the other way to grow beings, no mesh at all.',l:'https://iquilezles.org'},
+{c:'tool',t:'tool',n:'gaussian splatting',k:'captured reality as point-matter — a future bridge for the 495 photographs.',l:'https://en.wikipedia.org/wiki/Gaussian_splatting'},
+{c:'tool',t:'tool',n:'itch.io + butler',k:'the venue where this genre lives; versioned pushes; devlog doubles as process doc.',l:'https://itch.io/docs/creators/html5'},
+{c:'tool',t:'tool',n:'Muse / Mind Monitor',k:'the biosignal instrument lineage — already in the vault, already made a folio.',l:'https://mind-monitor.com'},
+
+// —— specimens
+{c:'spec',t:'specimen',n:'palette · night',k:'home register — indigo, teal, moss, ink, dusty rose, rare gold flecks.',swatch:['#5a74b8','#3f8a80','#4f8a56','#46589a','#9a6070','#b89040']},
+{c:'spec',t:'specimen',n:'palette · folio',k:'the gold-leaf district — parchment heat on near-black warm.',swatch:['#b89040','#8a6a3a','#7a6a52','#5a4632','#7a2a28','#d8b860']},
+{c:'spec',t:'specimen',n:'palette · rose',k:'the lineage green — à toi’s field, dimmed to night.',swatch:['#1f8a3f','#155a2c','#2fae54','#1e6a56','#7ad890','#b89040']},
+{c:'spec',t:'specimen',n:'type · the dream speaking',k:'serif italic, centred, patient.',type:'Fate greets me at the gate. It’s been some time since we last met - she’s growing old.'},
+{c:'spec',t:'specimen',n:'type · the instrument speaking',k:'small mono, margins, lowercase.',type:'fate-at-the-gate · gone and gone again · 2',mono:true},
+{c:'spec',t:'specimen',n:'the ramp',k:'density as brightness — the ascii contract, rose-field heritage.',ramp:' .·:;+*#@░▒▓█'},
+{c:'spec',t:'specimen',n:'the honesty labels',k:'provenance as a visible material property — TEKNE’s registers, everywhere.',chips:['LIVE','RECORDED','MODEL','SIMULATED']},
+{c:'spec',t:'rule',n:'likeness drifts, sentiment locked',k:'“i can never fully remember the likeness… but i remember their actions, sentiment towards me and general archetype.” — 18.05.26. the hallucination policy.'},
+{c:'spec',t:'rule',n:'nothing appears from nowhere',k:'everything is always the field. forms are the field temporarily agreeing.'},
+{c:'spec',t:'rule',n:'english is rare',k:'most glyphs never resolve. resolution is attention’s reward — leaning is reading.'},
+{c:'spec',t:'rule',n:'the terms are visible',k:'the pass before the dream. consent as scene one, in-fiction, always.'},
+{c:'spec',t:'rule',n:'no guilt in the dream',k:'no streaks, no scores, no shame. absence is weather.'},
+];
+
+const nav = document.getElementById('nav');
+const board = document.getElementById('board');
+const count = document.getElementById('count');
+let activeCh = null, q = '';
+
+const chMap = Object.fromEntries(CHANNELS.map(c=>[c[0],c]));
+
+function render(){
+  const ql = q.toLowerCase();
+  const visible = BLOCKS.filter(b =>
+    (!activeCh || b.c===activeCh) &&
+    (!ql || (b.n+' '+b.k+' '+b.t).toLowerCase().includes(ql)));
+  board.innerHTML = visible.map(b=>{
+    const ch = chMap[b.c];
+    let media='';
+    if(b.img) media = `<img src="${b.img}" loading="lazy" alt="">`;
+    if(b.swatch) media = `<div class="swatches">${b.swatch.map(s=>`<div style="background:${s}"></div>`).join('')}</div>`;
+    if(b.ramp) media = `<div class="ramp">${b.ramp}</div>`;
+    if(b.type) media = `<div class="typespec${b.mono?' mono':''}">${b.type}</div>`;
+    if(b.chips) media = `<div class="chips">${b.chips.map(c=>`<span>${c}</span>`).join('')}</div>`;
+    const link = b.l ? `<a class="lnk" href="${b.l}" target="_blank" rel="noreferrer">open ↗</a>` : '';
+    return `<div class="block${b.t==='rule'?' rule':''}" style="--chc:${ch[2]}">
+      ${media}
+      <div class="body">
+        <div class="tag"><b>${ch[1]}</b> · ${b.t}</div>
+        <div class="title">${b.n}</div>
+        <div class="take">${b.k}</div>
+        ${link}
+      </div></div>`;
+  }).join('');
+  count.textContent = `${visible.length} of ${BLOCKS.length} blocks` + (activeCh? ` · ${chMap[activeCh][1]}` : ' · all channels');
+}
+
+function renderNav(){
+  nav.innerHTML = `<button class="${!activeCh?'on':''}" data-ch="">all · ${BLOCKS.length}</button>` +
+    CHANNELS.map(([id,name])=>{
+      const n = BLOCKS.filter(b=>b.c===id).length;
+      return `<button class="${activeCh===id?'on':''}" data-ch="${id}">${name} · ${n}</button>`;
+    }).join('') + `<input id="q" placeholder="search the board" value="${q}">`;
+  nav.querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>{
+    activeCh = btn.dataset.ch || null; renderNav(); render();
+  }));
+  const qi = nav.querySelector('#q');
+  qi.addEventListener('input',()=>{ q = qi.value; render(); });
+}
+
+renderNav();
+render();
+</script>
+</body>
+</html>

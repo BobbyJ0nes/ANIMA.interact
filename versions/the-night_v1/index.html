@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>anima · the circuit</title>
+<style>
+  html,body{margin:0;height:100%;background:#0a0d12;overflow:hidden}
+  canvas{display:block}
+
+  /* prose — the dream speaks in the writing's own words */
+  #prose{position:fixed;left:50%;bottom:11vh;transform:translateX(-50%);max-width:46rem;width:calc(100% - 4rem);
+    font:italic 17px/1.75 Georgia,'Times New Roman',serif;color:#e8e2d5;opacity:0;transition:opacity 2.4s ease;
+    text-align:center;pointer-events:none;text-shadow:0 1px 16px rgba(0,0,0,.85)}
+  #prose.show{opacity:.92}
+
+  /* interstitial — the cut between scenes; dreams don't travel */
+  #interstitial{position:fixed;inset:0;background:#030405;display:flex;align-items:center;justify-content:center;
+    opacity:0;transition:opacity .95s ease;pointer-events:none;color:#e8e2d5;
+    font:italic 19px/1.9 Georgia,serif;text-align:center;padding:2rem}
+  #interstitial.show{opacity:1;pointer-events:auto}
+
+  .pass{font:13px/2 ui-monospace,Consolas,monospace;font-style:normal;text-align:left;
+    max-width:36rem;white-space:pre-wrap;color:#ddd6c6}
+  .pass .take{margin-top:2.4em;opacity:.5;font-size:11px}
+
+  .title{font:400 26px/2 Georgia,serif;letter-spacing:.5em;font-style:normal}
+  .sub{opacity:.55;font-size:13px;letter-spacing:.22em;font-style:normal}
+  .keys{opacity:.4;font-size:11px;margin-top:2.4em;font-family:ui-monospace,monospace;font-style:normal}
+
+  #marker{position:fixed;left:14px;bottom:12px;font:10px ui-monospace,monospace;
+    color:rgba(232,226,213,.35);letter-spacing:.1em}
+  #hint{position:fixed;right:14px;bottom:12px;font:10px ui-monospace,monospace;
+    color:rgba(232,226,213,.3);letter-spacing:.06em}
+</style>
+</head>
+<body>
+  <div id="prose"></div>
+  <div id="interstitial"></div>
+  <div id="marker"></div>
+  <div id="hint"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
