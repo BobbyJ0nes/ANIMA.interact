@@ -48,6 +48,23 @@ biosignals, honesty-labeled.
   joins canon), then the full adopt wave: speech-as-condensation,
   whispering moss, wakes, shore gradients, the depletion arc, moon
   phases, cliff strata.
+- **19.08 — the night (v1).** the museum-not-dream verdict answered:
+  a director sequences the writing's order (gate → cloakroom → willow
+  → streetlamp → theatre → boat → the fold), transitions dissolve the
+  world into its own letters, and the margin voice types the writing
+  at the moment each sentence becomes true. full narrated headless
+  playthrough green. frozen as `versions/the-night_v1/`.
+- **19.08 — v2, the excavated night.** the author's story-mode note
+  (navigable prose, characters with form/depth/autonomy, illusion of
+  choice / inevitability of encounters, progressive liminality, less
+  abstraction) ran as a structured wave: five parallel fable forks →
+  `explorations/v2/` + `CONVERGENCE_v2.md`; a cross-model consult
+  (gpt-5.6 over the pi harness, memo pair in `BASAIRA/.pi_tmp/`)
+  whose critique changed the build — *conduct is not intention*, the
+  unwitnessed state; the engine layer (chapter pages, the reading
+  band, the faded hand, chosen→echo, the tempered liminal dial); four
+  opus 5 instances, one per scene-domain, against the frozen
+  contract; then full-night verification (zero errors, honest echo).
 
 ## method — agents as medium, under authored constraint
 
@@ -67,6 +84,12 @@ the author:
 - **signs type, beings condense.** mechanical speech for notices;
   condensation for voices — nothing appears from nowhere.
 - **the visitor is a guest, and mute.** locked by verdict 19.08.
+- **conduct is not intention** (19.08, adopted from the cross-model
+  consult). the night reads position, facing, stillness, timing — but
+  records a verdict only when clearly witnessed; an unmet offer keeps
+  no interpretation and leaves only an '…'. the system refuses to
+  manufacture psychology from telemetry — which is the piece's
+  argument about predictive systems, enforced on itself.
 - **verification discipline.** every scene and every change verified
   headless (console-clean + screenshot review) before it counts as
   done. the shots in `shots/` are those verifications.
@@ -77,13 +100,22 @@ the author:
 parallel agent work was orchestrated as: frozen contract → one file
 per agent → self-verification → parent integration sweep → authored
 verdicts → adoption. the fork reports quoted throughout the README
-are the primary process documents of those phases.
+are the primary process documents of those phases. from v2 onward the
+loop also includes a second model family as critic: a design spec is
+sent to gpt-5.6 ("sol") over the author's pi harness before building,
+and the adjudicated critique is recorded beside the fork documents
+(`explorations/v2/CONVERGENCE_v2.md`, `.pi_tmp/ideation-agents/`).
 
 ## evidence index
 
 - `README.md` — the living log: settled ground, studies, verdicts
 - `src/term/scenes/CONTRACT.md` — the constitution agents build under
 - `explorations/` — seven divergence documents + CONVERGENCE.md
+- `explorations/v2/` — five v2 fork documents + CONVERGENCE_v2.md
+  (with the sol-consult adjudication)
+- `versions/the-night_v1/` — the frozen v1 build + VERSION.md
+- `BASAIRA/.pi_tmp/ideation-agents/gpt56sol-anima-v2-consult-*` — the
+  cross-model consult, turn and response, verbatim
 - `shots/` — ~60 verification and process images, phase-prefixed
   (v0_, field01_, term01_, scene_, sweep_, x_*)
 - `public/eeg/session01.json` + `session01_latent.json` — the
@@ -102,10 +134,17 @@ verified results in-session. all displayed prose is his writing,
 verbatim. the critical report accompanying this piece is written by
 him alone. per-file declarations: see the header of any source file.
 
-## current state + unresolved
+## current state
 
-twelve scenes sweep console-clean. unresolved at time of writing:
-the EC deadline date (governs submission sequencing); the scope
-freeze (character-LLM figures argued as horizon vs built); repo
-hosting + captured walk video (queued). see `explorations/
+the submitted piece is **v2, "the excavated night"** — consolidated
+deadline morning on the author's word ("as is"). verification at
+freeze: full-night headless playthrough gate → fold, zero console
+errors, honest conduct-echo confirmed; twelve scenes sweep clean in
+lab; production build + smoke green. v1 is preserved whole at
+`versions/the-night_v1/`. scope frozen: constraint-system artwork
+now, character-LLM figures argued as horizon in the report. five
+display lines from journal entries beyond 06.06.26 are in the piece
+under the corpus-widening law — cited file:line in scene headers,
+each behind a removable constant (the README carries the register).
+the critical report is the author's alone. see `explorations/
 submission.md` for the submission plan this document serves.

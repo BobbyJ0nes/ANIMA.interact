@@ -102,7 +102,7 @@ function slotColor(band, step) {
 
 const CORE_RAMP = [' ', '.', '·', ':', ';', '+', '*', '#', '@', '░', '▒', '▓', '█'];
 const CORE_WRITING = ('abcdefghijklmnopqrstuvwxyz' + 'WGFTSAI' + '0682' + ".,:;·-—'\"()").split('');
-const CORE_ALWAYS = [' ', '.', '·', ':', ';', '+', '*', '#', '@', '░', '▒', '▓', '█', '│', '║', '═', '▄', '…'];
+const CORE_ALWAYS = [' ', '.', '·', ':', ';', '+', '*', '#', '@', '░', '▒', '▓', '█', '│', '║', '═', '▄', '…', '/', '\\'];
 
 let RAMP = CORE_RAMP, WRITING = CORE_WRITING;
 let CHARS = [], CIDX = new Map(), rampIdx = [], writIdx = [];
@@ -336,8 +336,16 @@ export function narrate(text) {
   marginQ.push({ text });
 }
 
+let marginLastT = 0;
 function renderMargin(t) {
-  if (speakCur || pageState) return; // one typed voice at a time
+  const mdt = Math.min(0.1, Math.max(0, t - marginLastT));
+  marginLastT = t;
+  if (speakCur || pageState) {
+    // one typed voice at a time — but a suppressed line's clock freezes,
+    // so it resumes unread rather than expiring behind the speech
+    if (marginCur) marginCur.t0 += mdt;
+    return;
+  }
   if (!marginCur && marginQ.length) { marginCur = marginQ.shift(); marginCur.t0 = t; }
   if (!marginCur) return;
   const m = marginCur;

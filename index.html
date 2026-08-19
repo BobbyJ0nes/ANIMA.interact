@@ -3,42 +3,44 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>anima · the circuit</title>
+<title>anima · the night</title>
+<!-- ai-use: written by claude (fable 5) agent instances working with bilaal
+     auleear, who directed, constrained, and verified it in-session. all display
+     prose is his writing, verbatim. method + provenance: PROCESS.md -->
 <style>
-  html,body{margin:0;height:100%;background:#0a0d12;overflow:hidden}
-  canvas{display:block}
-
-  /* prose — the dream speaks in the writing's own words */
-  #prose{position:fixed;left:50%;bottom:11vh;transform:translateX(-50%);max-width:46rem;width:calc(100% - 4rem);
-    font:italic 17px/1.75 Georgia,'Times New Roman',serif;color:#e8e2d5;opacity:0;transition:opacity 2.4s ease;
-    text-align:center;pointer-events:none;text-shadow:0 1px 16px rgba(0,0,0,.85)}
-  #prose.show{opacity:.92}
-
-  /* interstitial — the cut between scenes; dreams don't travel */
-  #interstitial{position:fixed;inset:0;background:#030405;display:flex;align-items:center;justify-content:center;
-    opacity:0;transition:opacity .95s ease;pointer-events:none;color:#e8e2d5;
-    font:italic 19px/1.9 Georgia,serif;text-align:center;padding:2rem}
-  #interstitial.show{opacity:1;pointer-events:auto}
-
-  .pass{font:13px/2 ui-monospace,Consolas,monospace;font-style:normal;text-align:left;
-    max-width:36rem;white-space:pre-wrap;color:#ddd6c6}
-  .pass .take{margin-top:2.4em;opacity:.5;font-size:11px}
-
-  .title{font:400 26px/2 Georgia,serif;letter-spacing:.5em;font-style:normal}
-  .sub{opacity:.55;font-size:13px;letter-spacing:.22em;font-style:normal}
-  .keys{opacity:.4;font-size:11px;margin-top:2.4em;font-family:ui-monospace,monospace;font-style:normal}
-
-  #marker{position:fixed;left:14px;bottom:12px;font:10px ui-monospace,monospace;
-    color:rgba(232,226,213,.35);letter-spacing:.1em}
-  #hint{position:fixed;right:14px;bottom:12px;font:10px ui-monospace,monospace;
-    color:rgba(232,226,213,.3);letter-spacing:.06em}
+  html,body{margin:0;min-height:100%;background:#04060c;color:#aab6d8;
+    font:13px/1.9 ui-monospace,Consolas,"Cascadia Mono",monospace}
+  main{max-width:34rem;margin:0 auto;padding:18vh 1.6rem 8vh}
+  h1{font-size:15px;font-weight:400;letter-spacing:.32em;color:#dde6f8;margin:0 0 2.6rem}
+  p{margin:0 0 1.4rem;color:#6a7ba8}
+  a{color:#dde6f8;text-decoration:none;border-bottom:1px solid #2b355c}
+  a:hover{border-bottom-color:#dde6f8}
+  .enter{display:inline-block;margin:1.2rem 0 2.8rem;padding:.55rem 1.4rem;
+    border:1px solid #2b355c;letter-spacing:.18em;color:#dde6f8}
+  .enter:hover{border-color:#dde6f8}
+  .quiet{font-size:11px;color:#46589a;letter-spacing:.06em}
+  .quiet a{color:#6a7ba8;border-bottom-color:#1c2440}
+  hr{border:none;border-top:1px dotted #2b355c;margin:2.6rem 0}
 </style>
 </head>
 <body>
-  <div id="prose"></div>
-  <div id="interstitial"></div>
-  <div id="marker"></div>
-  <div id="hint"></div>
-  <script type="module" src="/src/main.js"></script>
+<main>
+  <h1>anima.interact &middot; the night</h1>
+  <p>the 06.06.26 dream-writing, typeset as a walkable night. a software
+     renderer with no meshes and no pixels &mdash; the third dimension is an
+     act of typesetting, re-performed every frame. every displayed sentence
+     is the author's journal, verbatim, typos kept.</p>
+  <a class="enter" href="/term.html">enter the night</a>
+  <p class="quiet">wasd walk &middot; drag look &middot; space &middot;
+     the writing tells you the rest</p>
+  <hr>
+  <p class="quiet">process record: PROCESS.md in the repository &middot;
+     studies kept as record: <a href="/board.html">reference board</a> &middot;
+     <a href="/field.html">the field study</a> &middot;
+     <a href="/circuit.html">circuit v0</a> (the first walk, superseded)</p>
+  <p class="quiet">an EEG-recorded writing session sets the night's weather,
+     honesty-labeled (recorded / model). built by claude agent instances under
+     an authored constraint system; the author wrote every displayed word.</p>
+</main>
 </body>
 </html>

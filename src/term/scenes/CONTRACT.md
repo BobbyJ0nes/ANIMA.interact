@@ -148,6 +148,14 @@ frozen surface; scenes import from `../engine.js`:
   closes and lowers / thins to '…').
 - chapter pages are the director's business (night.js) — scenes never
   page. `?lab` never pages.
+- RENDER FACT (19.08, found in the v2 wave): for ground LETTER cells,
+  `g.lum` only gates visibility (0.18–0.8) and picks ramp glyphs —
+  it does not brighten. a traveling "pull" crest must be a BAND lift
+  (e.g. 5 → 6 on the lit index), not a lum add. margin/narrate lines
+  render whole rows cleared; a `narrate()` queued while speak()/page
+  holds the band now freezes rather than expiring (engine guarantees
+  it). `/` and `\` joined CORE_ALWAYS (the hand's fingers) — listing
+  them in extras is harmless but no longer required.
 
 ## being autonomy (v2 checklist — every being answers four questions)
 

@@ -13,7 +13,8 @@ export default defineConfig({
         board: resolve(__dirname, 'board.html'),  // reference board
         field: resolve(__dirname, 'field.html'),  // study
         scene: resolve(__dirname, 'scene.html'),  // study
-        index: resolve(__dirname, 'index.html'),  // v0 circuit (superseded; kept as record)
+        circuit: resolve(__dirname, 'circuit.html'), // v0 circuit (superseded; kept as record)
+        index: resolve(__dirname, 'index.html'),  // landing — routes to term.html
       },
     },
   },

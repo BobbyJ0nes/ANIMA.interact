@@ -410,16 +410,120 @@ repo + hosting + captured walk (need his accounts + a publish word).
   its subconscious claim as the crossing/unshaped pair: the named map
   and the unshaped ground, performing the solipsist tension
 
-## open
+## versioned — the-night_v1 (19.08, frozen)
 
-- EC deadline dates (both modules) — decides sequencing against DIALEK
-- scope freeze for submission (constraint-system artwork now,
-  character-LLMs argued as horizon) — leaning yes, unconfirmed
-- model tier per figure — prompted base / one shared voice-adapter /
-  per-figure weights. not every figure needs the same tier
-- is the cloakroom really `/` — every visit starts by storing memories?
-- the adopt-now list in `explorations/CONVERGENCE.md` (condensation to
-  fate/otter, moss to gate, wakes, engine waves) — queued, awaiting go
+the night as walked on 19.08 (`?fresh` entrance, margin voice, full
+green playthrough) is snapshotted whole at `versions/the-night_v1/`
+with a `VERSION.md`. v2 forks from it in place; the frozen copy is
+the reference point for every verdict that follows.
+
+## v2 — the excavated night (19.08, one structured wave)
+
+bobby's note: story-mode navigation; dialogue and prose bigger,
+immersive, navigable; characters with form, depth, autonomy; an
+illusion of choice, an inevitability of encounters; progressive
+liminal states; scenes that flow, a walker who knows where they are
+and why — or is made to question it; slightly less abstract ("for
+example Fate"); document, version, fork.
+
+**the wave:** five parallel fable forks (prose/dialogue · characters ·
+choice+liminality · flow/interface · wildcards+submission) →
+`explorations/v2/*` converged in `CONVERGENCE_v2.md`. the naming find:
+the dream entry already contains the missing depth — Fate's exchange
+has six beats in the writing, v1 staged three; the recent journal
+carries the choice mechanic already written (17.08.26's faded hand).
+**depth is excavation, not invention.** then a cross-model consult —
+gpt-5.6 ("sol") over the pi harness — whose critique changed the
+build: *conduct is not intention* (verdicts only when witnessed; the
+unmet offer keeps no interpretation, marked '…'), never gate character
+depth behind invisible conduct, two legible Space states, the page as
+causal residue. then the engine layer (fable) and four opus 5
+instances, one per scene-domain, against the frozen contract.
+
+**what the night now does:**
+
+- **chapter pages** — between places the letter-storm settles into
+  the destination's name and the stage's verbatim paragraph typesets;
+  Space finishes, Space turns; the next place condenses visibly out
+  of the words just read. provenance is the story's structure.
+- **the reading band** — beings speak their quoted lines into a grown
+  margin band while their own condensation pulses; the speaker is
+  known by whose letters are in the air.
+- **the faded hand** — the night's choice grammar, from his sentence:
+  taking or declining is conduct, declining never blocks, and only a
+  witnessed verdict is recorded.
+- **chosen → echo** — this night's conduct swaps into echo at the
+  fold; night one stays pure canon, the second night greets who you
+  were (fate scold-first, the tried coat pausing its sway, the rowed
+  sea's line).
+- **the liminal dial, tempered** — authored deepening (fog, thinning
+  solids, sleepier margin, emptier stars, longer dissolves), gains
+  halved after the consult so legibility is never the sacrifice; each
+  scene carries one authored deepening of its own.
+- **the excavated beings** — Fate's full six-beat exchange (idle
+  writing that fails to settle, the notice, the greeting, the payment
+  and the card, the refusal that cannot be said, her scold); the
+  otter's gaze-witnessed inner life; coats that grow down the aisle
+  and wrap the frame when tried on; the cats' registration queue and
+  the refused one that registers you; the lamp's accumulating wait
+  (letter-moths, the deepening lean); the menu cursor that exists in
+  order not to matter (the same drink, arriving differently); the
+  rerun for those who won't stand; the leap that refuses you until
+  the stairs complete it from their end; the boat question, facing
+  her; the RECORDED sea breathing with the session's own rhythm.
+
+**verified:** full v2 night headless, gate → fold, zero console
+errors; the fold swapped an honest echo (a teleporting camera earned
+only tongue/menu/leave/sea — everything unwitnessed stayed
+unrecorded); twelve scenes sweep clean in lab.
+
+## the widened corpus — cited register (settled 19.08)
+
+v2 adopts corpus widening (convergence law 8): a display line may come
+from any typed entry in the author's journal, cited file:line in the
+owning scene's header, read in its surrounding paragraph before
+adoption. excluded entirely: she_dream.txt, prayer-addressed lines,
+model-mediated files. five lines beyond 06.06.26 are in the piece;
+each sits behind a named constant — emptying it silences the line and
+every mechanic stands. the register, for the record and for revision:
+
+- gate: `XE_DECLINE` 17.08.26:14 (trimmed at the clause) ·
+  `XE_FOLD2` 2026-04-10.md:31 · `XE_FOLD3` 20.07.26:15
+- theatre: `LEDGE_DANGLE` — "i close my eyes as my feet dangle"
+  (06.06.26:5, trimmed at the clause)
+- cloakroom: `TRIED_LINE` 17.08.26:24
+- boat: `ECHO_ROWED` 20.07.26:18 · the she-question (06.06.26:5)
+  split at its own full stop into two margin lines
+- interface: dream-mode hint reads `wasd walk · drag look · space`;
+  the corner marker drops the scene id in the night
+- the honesty label says `74 minutes` (the session's length; the
+  replay file trims strap-settling to 72.5 — one string in boat.js
+  if the label should name the file instead of the night)
+- tunables, should the walk want them: page 34cps / 28s safety ·
+  hand dwell 1.5s · the theatre margin queue backlogs at the ledge
+  (the drift/jacket cues are the queue) · the tried-coat echo reads
+  when a crossing sends wind through the coats
+
+## settled 19.08 — the submission shape
+
+- **v2 ships as the piece** (bobby, deadline morning: "consolidate and
+  get a submission ready as is"). fully green: full-night playthrough,
+  twelve-scene lab sweep, production build + smoke — zero errors.
+- **scope frozen**: constraint-system artwork now; character-LLM
+  figures argued as horizon in the report, not built.
+- the widened-corpus register above stands as adopted; any line can
+  be struck by emptying its constant, before or after submission.
+- v1 preserved whole at `versions/the-night_v1/` (also in-repo).
+
+## open (post-submission horizon)
+
+- the critical report — the author's alone, no AI prose (in progress
+  deadline morning; skeleton in `explorations/submission.md`)
+- hosting push + walk-video upload — the author's accounts
+- model tier per figure (prompted base / shared voice-adapter /
+  per-figure weights) — the report's horizon argument
+- from the hold-list: murmuration near-word, false dawn, state-grammar
+  weathers, the identities line, the ghost bridge, x_* labs in `?lab`
 
 ---
 

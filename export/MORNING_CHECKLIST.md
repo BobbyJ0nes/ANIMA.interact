@@ -1,11 +1,17 @@
 # ANIMA — the morning, mechanised (Shape 1)
 
-> Everything agent-side is DONE: the build ships `term.html` (verified — production
-> smoke test, zero errors, screenshot at `shots/dist_smoke_term.png`), `.gitignore`
-> holds (271 files, no inspo/node_modules), the repo is initialised and committed
-> (`cafebb6`), source text ships as `source/06.06.26.txt`, PROCESS.pdf + README_LOG.pdf
-> are in `export/`, and the two accuracy traps (castle-as-horizon, Eros
-> never-trained) are corrected in the record. What remains needs your hands.
+> Everything agent-side is DONE — **and the piece that ships is v2, "the
+> excavated night"** (your word, deadline morning: "consolidate… as is";
+> the old park-v2 recommendation below is superseded — v2 went fully green:
+> full-night playthrough + 12-scene sweep + production build, zero errors).
+> The repo is committed with v2 consolidated; `index.html` is now a landing
+> that routes to `term.html` (v0 circuit preserved at `circuit.html`);
+> PROCESS.pdf + README_LOG.pdf are regenerated from the v2 docs;
+> `export/anima_dist_upload.zip` is the built site ready for Netlify
+> drop / GitHub Pages; `export/walk_v2.webm` is a captured full-night walk
+> (local only — nothing was published). Source text ships as
+> `source/06.06.26.txt`; accuracy traps (castle-as-horizon, Eros
+> never-trained) corrected in the record. What remains needs your hands.
 
 ## 0 · First login (10 min) — TWO errands, one Moodle visit
 - [ ] Confirm the EC deadline/time for IU000325 (nothing in the vault confirms today 14:00).
@@ -47,8 +53,19 @@ trained.
       clear disclaimer section (the brief demands it twice).
 - [ ] Upload, receipt, done.
 
-## Parked (your word only)
-- **v2 ("the excavated night")**: runs on a branch or not at all; v1 is what
-  ships unless v2 is fully green by T-90. Recommendation: park it.
+## Settled since this was written
+- **v2 ships** (your "consolidate… as is") — fully green, consolidated,
+  committed. v1 stays whole at `versions/the-night_v1/` if you ever want it.
+- **One revocable call made under the corpus-widening law**: five display
+  lines from journal entries beyond 06.06.26 are live in the piece (register
+  in README, each cited + behind a removable constant). NOTE: these journal
+  fragments go public with the repo/site exactly as far as the piece itself
+  displays them — strike any line by emptying its constant BEFORE pushing if
+  you don't want it public.
+
+## Still parked (your word only)
 - `writing_session_001/` photos (113MB DNG): not in the repo; add 2–3 exported
   JPGs to `shots/` if you want the hand-notes evidence visible. Optional.
+- The walk video: `export/walk_v2.webm` exists (agent-captured, local). Upload
+  it, re-record your own walk over it, or skip — the brief's video slot is
+  yours to fill.
