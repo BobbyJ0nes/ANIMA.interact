@@ -12,15 +12,17 @@ verbatim, typos kept (the few utilitarian interface labels — the hint
 line, the honesty stamps — are listed as such in the repository README).
 
 HOW TO EXPERIENCE IT
-1. THE REPOSITORY — the intended path. Requirements: node 18+ and npm,
-   nothing else.
+1. RUN THE PIECE — from the repository, or identically from this
+   bundle's code/ folder. Requirements: node 18+ and npm, nothing else.
+       cd code        (if using this bundle)
        npm install
        npm run dev        ->  http://localhost:5199
    The landing routes you into the night. Walk with wasd, look by
    dragging, space is the only button; the margin types the author's
    sentences as they become true — they are the instructions. The
-   repository README's "run it" section maps every asset (the piece,
-   the walker's guide, the lab view, the reference board, the studies).
+   README's "run it" section (in code/ and the repository) maps every
+   asset (the piece, the walker's guide, the lab view, the reference
+   board, the studies).
 2. The hosted URL, if one is given in the Moodle text field — the same
    piece, nothing to install.
 3. Watch it: walk_v2.webm in this bundle — a captured 4.5-minute full
@@ -37,6 +39,9 @@ THIS BUNDLE
   decision in chronological order
 - GUIDE.pdf — the walker's guide + navigation design record
 - walk_v2.webm — captured full-night walk (1280x720, WebM)
+- code/ — the complete source of the piece (engine, scenes, data,
+  pages, configs, docs). npm install; npm run dev inside it — identical
+  to the repository.
 - source/ — 06.06.26.txt (the spine entry, whole) and JOURNAL.md (the
   journal where it touches this night: censored verbatim excerpts,
   linked to their places in the piece)
