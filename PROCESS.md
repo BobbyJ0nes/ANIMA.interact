@@ -109,6 +109,9 @@ and the adjudicated critique is recorded beside the fork documents
 ## evidence index
 
 - `README.md` — the living log: settled ground, studies, verdicts
+- `GUIDE.md` (also `/guide.html`, `export/GUIDE.pdf`) — the walker's
+  guide: how to walk the night + the navigation premises, logic, and
+  reasoning as an eleven-rule constraint record
 - `src/term/scenes/CONTRACT.md` — the constitution agents build under
 - `explorations/` — seven divergence documents + CONVERGENCE.md
 - `explorations/v2/` — five v2 fork documents + CONVERGENCE_v2.md

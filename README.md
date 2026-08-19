@@ -509,6 +509,11 @@ every mechanic stands. the register, for the record and for revision:
 - **v2 ships as the piece** (bobby, deadline morning: "consolidate and
   get a submission ready as is"). fully green: full-night playthrough,
   twelve-scene lab sweep, production build + smoke — zero errors.
+- **the walker's guide**: `GUIDE.md` (canonical) / `/guide.html` on the
+  hosted site / `export/GUIDE.pdf` in the bundle — part one walks the
+  night stage by stage; part two documents the navigation premises,
+  logic, and reasoning (eleven rules, premise → mechanic → reason). the
+  piece itself stays instruction-free; the guide is the out-of-world map.
 - **scope frozen**: constraint-system artwork now; character-LLM
   figures argued as horizon in the report, not built.
 - the widened-corpus register above stands as adopted; any line can

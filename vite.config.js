@@ -22,6 +22,7 @@ export default defineConfig({
         field: resolve(__dirname, 'field.html'),  // study
         scene: resolve(__dirname, 'scene.html'),  // study
         circuit: resolve(__dirname, 'circuit.html'), // v0 circuit (superseded; kept as record)
+        guide: resolve(__dirname, 'guide.html'),  // the walker's guide (GUIDE.md is canonical)
         index: resolve(__dirname, 'index.html'),  // landing — routes to term.html
       },
     },

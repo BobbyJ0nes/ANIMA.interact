@@ -9,6 +9,7 @@ const path = require('path');
 const DOCS = [
   ['PROCESS.md', 'PROCESS.pdf', 'ANIMA — process record'],
   ['README.md', 'README_LOG.pdf', 'ANIMA — living log'],
+  ['GUIDE.md', 'GUIDE.pdf', 'ANIMA — the walker’s guide'],
 ];
 const style = `<style>
   * { box-sizing: border-box; }

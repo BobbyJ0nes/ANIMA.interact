@@ -47,8 +47,10 @@ enters. Two truth guards: castle = horizon, not scene; Eros = specified, never
 trained.
 
 ## 3 · Bundle + upload (20 min)
-- [ ] ZIP: `PROCESS.pdf` + `README_LOG.pdf` + the report (PDF) + repo URL inside
-      the report AND in the Moodle text field. Optionally `shots/` (36MB — fits).
+- [ ] ZIP: `PROCESS.pdf` + `README_LOG.pdf` + `GUIDE.pdf` (the walker's
+      guide — navigation premises + logic documented) + the report (PDF) +
+      repo URL inside the report AND in the Moodle text field. Optionally
+      `shots/` (36MB — fits) and `walk_v2.webm` (the captured walk, 34.5MB).
 - [ ] AI disclaimers: already in all 35 source files; the report needs its own
       clear disclaimer section (the brief demands it twice).
 - [ ] Upload, receipt, done.
