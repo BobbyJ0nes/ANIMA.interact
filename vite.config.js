@@ -6,6 +6,9 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+  // relative base: the built site runs from any folder, subpath, or
+  // github-pages project site — the submission zip's site/ depends on it
+  base: './',
   server: {
     watch: {
       // evidence and bundle dirs are written while the dev server runs

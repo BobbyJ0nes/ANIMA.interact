@@ -35,7 +35,8 @@ const STORE = 'anima.term.env';
 
 export async function initEnv() {
   try {
-    const r = await fetch('/eeg/session01.json');
+    // relative, so the built site runs from any folder or subpath
+    const r = await fetch('eeg/session01.json');
     if (r.ok) {
       rec = await r.json();
       env.recAvailable = !!(rec && rec.series && rec.n > 0);

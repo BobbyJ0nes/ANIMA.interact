@@ -11,14 +11,25 @@ labeled. Every displayed prose sentence is the author's journal,
 verbatim, typos kept (the few utilitarian interface labels — the hint
 line, the honesty stamps — are listed as such in the repository README).
 
-HOW TO EXPERIENCE IT (in order of fidelity)
-1. Walk it: the repository serves it locally (npm install; npm run dev;
-   open /term.html) — or the hosted URL if provided in the Moodle text
-   field. The landing page routes you; "?fresh" gives a first night.
-2. Watch it: walk_v2.webm in this bundle — a captured 4.5-minute full
-   walk of the night, gate to fold.
-3. Read it: GUIDE.pdf — part one walks the night; part two documents the
+HOW TO EXPERIENCE IT (in order of least friction)
+1. The hosted URL, if one is given in the Moodle text field — nothing to
+   install; the landing routes you to the night.
+2. This bundle's own copy of the piece (site/):
+     Windows — double-click RUN_SITE.bat
+     Mac/Linux — run:  sh RUN_SITE.sh
+   either serves the site at http://localhost:8123 and opens the browser
+   (keep the window open; refresh once if the browser beat the server).
+   Any static server works the same: from inside site/,
+   `python3 -m http.server 8123` or `npx serve -l 8123 .`
+   Note: double-clicking the .html files directly cannot work — browsers
+   refuse to run module scripts from a bare file, hence the tiny server.
+3. The repository: npm install; npm run dev; open /term.html.
+4. Watch it: walk_v2.webm — a captured 4.5-minute full walk of the
+   night, gate to fold.
+5. Read it: GUIDE.pdf — part one walks the night; part two documents the
    navigation premises, logic, and reasoning (eleven rules).
+In the piece: wasd walk, drag look, space — the writing tells you the
+rest; "?fresh" on the url gives a first night.
 
 THIS BUNDLE
 - [critical report PDF — the author's, added at upload]
