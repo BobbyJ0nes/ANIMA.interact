@@ -1,6 +1,8 @@
 # ai-use: written by claude (fable 5) agent instances working with bilaal
 # auleear, who directed, constrained, and verified it in-session.
 # method + provenance: PROCESS.md
+# note: absolute paths below are machine-local process artifacts (this
+# script drove a local blender session; kept as record, not for reuse).
 # two dream scenes for touchdesigner: fate-at-the-gate (assembled from the shop forms)
 # and the streetlamp in the strawberry field (with the tired-cycle lean keyframed).
 # exports fbx (baked anim) + glb per scene into ANIMA.interact/td/

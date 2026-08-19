@@ -187,7 +187,8 @@ implement as per-scene closures; no shared Being class.
 ## verification (each scene, before reporting done)
 
 dev server runs at http://localhost:5199. playwright is available via
-`NODE_PATH="C:/Users/bilaa/AppData/Roaming/npm/node_modules" node <script>`.
+`NODE_PATH="$(npm root -g)" node <script>` (point NODE_PATH at your
+global npm modules so playwright resolves).
 load `http://localhost:5199/term.html?scene=<id>`, wait ~1.2s, screenshot;
 use `window.term.cam(x,z,yaw,pitch)` for 2-3 vantages; check console errors
 are `[]`; save shots as `shots/scene_<id>_N.png`. iterate until it looks

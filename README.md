@@ -4,6 +4,20 @@
 > materialised as a browser-hosted 3d liminal space.
 > art & ai module vehicle (IU000325) · started 17.08.26
 
+## run it
+
+```
+npm install
+npm run dev        # → http://localhost:5199 — the landing routes you
+```
+
+**the piece is `/term.html`** (the night; `?fresh` = a first night;
+`?lab` = free roam). the walker's guide: `GUIDE.md` or `/guide.html`.
+production build: `npm run build` → `dist/`. this file is the living
+log, newest sections toward the end — the v2 sections and the settled
+submission shape are the current state; everything above them is kept
+as record.
+
 ## source material
 
 - `../writing_session_001/` — the writing, photographed on the macbook
@@ -62,7 +76,9 @@ candidate rules (fable, for veto):
 
 ## circuit v0 — built + walked 17.08.26
 
-- `npm i` then `npm run dev` → http://localhost:5199 · vite + three, plain js
+- `npm i` then `npm run dev` → http://localhost:5199 · vite, plain js
+  (this v0 walk used three.js; the shipped piece at `/term.html` does not —
+  its renderer is the termfield engine, no 3d library)
 - the walk: fate-at-the-gate → (the pass · any key) → the-cloakroom →
   the-mage-under-the-willow → the-streetlamp-in-the-strawberry-field →
   (00:68 · trailers) → the-theatre → (the leap) → the-boat →
@@ -407,7 +423,7 @@ repo + hosting + captured walk (need his accounts + a publish word).
   min ~28, each wearing its minute in digits. the disagreement is the
   honesty
 - **unshaped joins the circuit** (formerly x_latent) — the piece makes
-  its subconscious claim as the crossing/unshaped pair: the named map
+  its subconscious question as the crossing/unshaped pair: the named map
   and the unshaped ground, performing the solipsist tension
 
 ## versioned — the-night_v1 (19.08, frozen)

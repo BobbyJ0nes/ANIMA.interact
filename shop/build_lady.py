@@ -1,6 +1,8 @@
 # ai-use: written by claude (fable 5) agent instances working with bilaal
 # auleear, who directed, constrained, and verified it in-session.
 # method + provenance: PROCESS.md
+# note: absolute paths below are machine-local process artifacts (this
+# script drove a local blender session; kept as record, not for reuse).
 # builds the ANIMA lady as metaballs -> mesh -> decimate -> GLB export
 # runs inside blender via the mcp addon's execute_code channel
 import bpy, math

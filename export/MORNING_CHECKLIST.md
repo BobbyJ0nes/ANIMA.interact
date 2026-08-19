@@ -24,8 +24,8 @@ history** — do not make that public. The clean path is a NEW repo of
 
 ```
 # after creating an empty repo on GitHub (public, so the marker can open it):
-cd C:\CCL_BBY\Cloud_city_VAULT\BASAIRA\01-Projects\ANIMA\ANIMA.interact
-git remote add origin git@github.com:BobbyJ0nes/ANIMA-the-night.git
+cd <path-to>/ANIMA.interact
+git remote add origin git@github.com:<your-github>/ANIMA-the-night.git
 git push -u origin master
 ```
 

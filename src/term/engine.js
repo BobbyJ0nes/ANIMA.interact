@@ -6,6 +6,11 @@
 // the engine typesets that world into a lattice of characters every frame,
 // weathered by the env layer (model / recorded biosignals — see env.js).
 // scene contract: src/term/scenes/CONTRACT.md · reference: scenes/gate.js
+// technique lineage (non-class source, referenced per the brief): the
+// terrain is a heightfield column-march in the Voxel Space family
+// (Novalogic's Comanche renderer; algorithm study:
+// https://github.com/s-macke/VoxelSpace) — reimplemented from the idea
+// for character-cell typesetting; no code copied.
 
 import { env, initEnv, updateEnv, toggleSource } from './env.js';
 

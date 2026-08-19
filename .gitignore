@@ -11,3 +11,4 @@ Thumbs.db
 # deploy/bundle artifacts — regenerable, not source
 export/*.zip
 export/*.webm
+/ANIMA_SUBMISSION.zip

@@ -15,6 +15,23 @@ canon scenes + four element studies + one data-twin scene, all driven
 by an environment layer that replays the writing session's own
 biosignals, honesty-labeled.
 
+## the deeper enquiry
+
+the piece did not begin with the build weeks. the night is one
+manifestation of a longer enquiry — the ANIMA figures, Fate as a
+recurring character, dreams as a subconscious space, the refusal to
+force that space into a conscious shape — and the journal noticed all
+of it before any code existed. rather than paraphrase, the record lets
+the journal speak: **`source/JOURNAL.md`** holds the related passages
+verbatim (censored to only what this work draws on), each linked to
+where it lives in the piece. the set-aside directions are decisions in
+this document's timeline, not dead ends: the three.js circuit judged
+generic (the pivot that found the medium), the form-shop and
+touchdesigner lanes parked as reference, Eros specified and never
+trained, character-LLM figures argued as horizon, she_dream excluded,
+the named EEG channels demoted so the unnamed latent could carry the
+question.
+
 ## timeline
 
 - **17.08 — circuit v0.** vite + three.js skeleton of the dream's
@@ -116,6 +133,8 @@ and the adjudicated critique is recorded beside the fork documents
 - `explorations/` — seven divergence documents + CONVERGENCE.md
 - `explorations/v2/` — five v2 fork documents + CONVERGENCE_v2.md
   (with the sol-consult adjudication)
+- `source/JOURNAL.md` — the journal where it touches this night:
+  censored verbatim excerpts, each linked to its place in the piece
 - `versions/the-night_v1/` — the frozen v1 build + VERSION.md
 - `BASAIRA/.pi_tmp/ideation-agents/gpt56sol-anima-v2-consult-*` — the
   cross-model consult, turn and response, verbatim
@@ -127,6 +146,34 @@ and the adjudicated critique is recorded beside the fork documents
   shuffled 18.6%)
 - `board.html` — the 98-block reference board (visual language map)
 - source headers — every source file carries an ai-use declaration
+
+## the AI/ML in this work — approaches used, and refused
+
+for the marker assembling LO2: the piece's AI/ML is deliberate in what
+it uses and what it declines.
+
+- **agentic LLM fabrication as medium.** the code was written by claude
+  (fable 5) instances — in conversation, parallel forks, and a
+  scene-per-agent build wave (opus 5) — under the authored constraint
+  system above; a second model family (gpt-5.6, "sol") served as
+  design critic, its adjudicated critique recorded. the disclosure
+  granularity is per-file rather than per-section because fabrication
+  was whole-file: the header IS the section comment for everything
+  beneath it.
+- **biosignal processing.** the writing session's EEG: per-second
+  Hann-windowed FFT band powers, robust normalisation, a PCA latent
+  (three components, surrogate-tested against shuffled data) — standard
+  signal techniques implemented fresh for this piece, no library code
+  copied; parameters in the data files' meta. the recorded replay
+  drives ambient weather only, honesty-labeled.
+- **machine learning refused, kept as limits.** Eros (a QLoRA voice
+  fine-tune) is specified and deliberately untrained; character-LLM
+  figures are argued as horizon, not built. the runtime contains no
+  live inference — a stated position, not an omission.
+- **privacy by architecture.** the conduct memory (`dream.chosen` /
+  `echo`) lives in the visitor's own browser localStorage and is never
+  transmitted anywhere; the raw journal and raw EEG stay local — only
+  derived features and cited excerpts ship.
 
 ## ai-use statement
 

@@ -51,7 +51,9 @@ const ECHO_ROWED = 'let it be what it always was.';
 // "74 minutes" is the session as the project records it (env.js, PROCESS.md);
 // the preprocessed series in /eeg/session01.json runs 4347s ≈ 72.5 min — if
 // bobby wants the label to match the file exactly, this is the one string.
-const REC_LABEL = 'recorded · 06.06.26 · 74 minutes';
+// exact honesty: the session ran 74 min; the replay file trims
+// strap-settling to 72.5 — the label names both
+const REC_LABEL = 'recorded · 06.06.26 · 74 min session · 72.5 replayed';
 
 // row all you want; this sea writes no wakes; only stillness folds.
 // conduct is not intention: only plain, witnessed wandering is recorded.
@@ -152,7 +154,7 @@ export default {
   title: 'the boat — curtains close',
   register: 'page',
 
-  notation: { extra: ['/', '\\', 'C', '*', '?', '7', '4'] },
+  notation: { extra: ['/', '\\', 'C', '*', '?', '7', '4', '5'] },
 
   world: {
     far: 300,

@@ -1,6 +1,8 @@
 # ai-use: written by claude (fable 5) agent instances working with bilaal
 # auleear, who directed, constrained, and verified it in-session.
 # method + provenance: PROCESS.md
+# note: absolute paths below are machine-local process artifacts (this
+# script drove a local blender session; kept as record, not for reuse).
 # fate (hooded, leaning, pen-hand extended) + the gate (posts, bars, arch)
 # runs inside blender via the mcp socket; exports both as GLBs for the field
 import bpy, math

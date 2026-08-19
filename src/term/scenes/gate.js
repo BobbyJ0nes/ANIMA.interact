@@ -2,6 +2,8 @@
 // auleear, who directed, constrained, and verified it in-session. all display
 // prose is his writing, verbatim. method + provenance: PROCESS.md
 // fate-at-the-gate — the reference scene. night register, default notation.
+// (over the contract's ~350-line guideline by the length of its provenance
+// header — the citations are the overrun, kept deliberately.)
 //
 // v2 — her whole exchange, excavated. the entry stages six beats; v1 played
 // three. nothing here is invented; the unplayed middle was already written.

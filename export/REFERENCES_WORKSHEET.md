@@ -7,6 +7,25 @@
 > Cite only what the report actually discusses; a list wider than the argument
 > reads as padding.
 
+## The course's own texts (on the unit reading list — the Knowledge LO
+## expects engagement with these; verify editions before citing)
+
+- **Andreas Broeckmann** — *Machine Art in the Twentieth Century* (MIT
+  Press, 2016). Slots: the method section — situating a typesetting
+  machine within machine-art history.
+- **Jon McCormack & Mark d'Inverno (eds.)** — *Computers and
+  Creativity* (Springer, 2012). Slots: authorship under constraint —
+  the agent-fabrication method examined as creative system.
+- **Margaret A. Boden** — 'Creativity and Artificial Intelligence'
+  (Artificial Intelligence 103, 1998). Slots: Eros's empty membrane —
+  what kinds of creativity the constraint system permits machines.
+
+Class-topic mapping for the report: historic/contemporary examples →
+Lucier · Herndon · McCarthy · Anadol (anti-model) + the three above;
+privacy/ethics → own-data position + privacy-by-architecture (see
+PROCESS "the AI/ML in this work"); social impact → conduct-is-not-
+intention as an argument about predictive systems.
+
 ## The art canon (from board.html — verify each work's exact title/year)
 
 - **Alvin Lucier** — *Music for Solo Performer* (1965): brainwaves as physical
